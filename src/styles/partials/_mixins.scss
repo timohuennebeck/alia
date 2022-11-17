@@ -49,3 +49,9 @@
     padding: $mobile-padding-default;
     border-radius: 1.15rem;
 }
+
+@mixin bright-mobile-padding-background {
+    background-color: $prim-color-3;
+    padding: $mobile-padding-default;
+    border-radius: 1.15rem;
+}

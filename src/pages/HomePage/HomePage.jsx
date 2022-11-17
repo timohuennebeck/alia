@@ -1,6 +1,11 @@
 import "./HomePage.scss";
 
 // icons
+import paperImg from "../../assets/icons/paperclip.svg";
+import imagesImg from "../../assets/icons/image-gallery.svg";
+import liveImg from "../../assets/icons/cast.svg";
+import clockImg from "../../assets/icons/clock.svg";
+import usersImg from "../../assets/icons/users.svg";
 
 // images
 import profileImg from "../../assets/images/melanie-perkins.jpg";
@@ -18,13 +23,25 @@ export default function HomePage() {
             </div>
             <div className="home__share">
                 <img className="home__share-img" src={profileImg} alt="" />
-                <InputField placeholder="What's happening?" />
-                <div>
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                <div className="home__share-ctn">
+                    <InputField placeholder="What's happening?" />
+                    <div className="home__share-ctn-images">
+                        <div className="home__share-ctn-images-indv">
+                            <img className="home__share-ctn-images-indv-icon" src={paperImg} alt="" />
+                        </div>
+                        <div className="home__share-ctn-images-indv">
+                            <img className="home__share-ctn-images-indv-icon" src={imagesImg} alt="" />
+                        </div>
+                        <div className="home__share-ctn-images-indv">
+                            <img className="home__share-ctn-images-indv-icon" src={liveImg} alt="" />
+                        </div>
+                        <div className="home__share-ctn-images-indv">
+                            <img className="home__share-ctn-images-indv-icon" src={clockImg} alt="" />
+                        </div>
+                        <div className="home__share-ctn-images-indv">
+                            <img className="home__share-ctn-images-indv-icon" src={usersImg} alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

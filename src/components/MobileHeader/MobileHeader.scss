@@ -7,7 +7,7 @@
     justify-content: space-between;
 
     &__menu {
-        @include flex-vertical;
+        @include flex;
         @include mobile-padding-background;
 
         &-svg {
@@ -22,7 +22,7 @@
     }
 
     &__nav {
-        @include flex-vertical;
+        @include flex;
         @include mobile-padding-background;
         gap: $mobile-gap-default;
 
@@ -40,7 +40,7 @@
     }
 
     &__profile {
-        @include flex-vertical;
+        @include flex;
         @include mobile-padding-background;
         gap: $mobile-gap-default;
 

@@ -2,6 +2,9 @@
 @use "../../styles/partials/variables" as *;
 
 .home {
+    @include flex-column;
+    gap: $mobile-gap-default;
+
     &__explore {
         @include mobile-padding-background;
         @include flex-vertical;
@@ -16,6 +19,11 @@
     }
 
     &__share {
+        @include mobile-padding-background;
+        display: flex;
+        gap: $mobile-gap-default;
+        flex: 1 1 0;
+
         &-img {
             width: 3.25rem;
             height: 3.25rem;
@@ -25,6 +33,27 @@
             &:hover {
                 cursor: pointer;
                 transform: scale(1.05);
+            }
+        }
+
+        &-ctn {
+            @include flex-column;
+            gap: $mobile-gap-default;
+            flex: 1 1 0;
+
+            &-images {
+                @include flex-vertical;
+                justify-content: space-between;
+
+                &-indv {
+                    @include bright-mobile-padding-background;
+                    @include flex;
+
+                    &-icon {
+                        @include svg-size;
+                        @include svg-white;
+                    }
+                }
             }
         }
     }
