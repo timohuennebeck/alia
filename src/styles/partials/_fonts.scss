@@ -1,0 +1,19 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    src: url("../../assets/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    src: url("../../assets/fonts/Inter-Bold.ttf");
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    color: $sec-color-1;
+}
