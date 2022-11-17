@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.meetings-element {
+    @include flex-column;
+    gap: 0.25rem;
+
+    &__amount {
+        color: $sec-color-2;
+    }
+}

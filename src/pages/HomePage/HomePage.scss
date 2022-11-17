@@ -41,6 +41,11 @@
                 &-indv {
                     @include svg-size;
                     @include svg-white;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
                 }
             }
         }

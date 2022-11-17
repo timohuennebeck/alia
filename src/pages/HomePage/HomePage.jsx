@@ -19,6 +19,8 @@ import InputField from "../../components/InputField/InputField";
 import NewComment from "../../components/NewComment/NewComment";
 import FriendsList from "../../components/FriendsList/FriendsList";
 import HubsList from "../../components/HubsList/HubsList";
+import MeetingsList from "../../components/MeetingsList/MeetingsList";
+import EventsList from "../../components/EventsList/EventsList"
 
 export default function HomePage() {
     return (
@@ -92,6 +94,8 @@ export default function HomePage() {
             <NewComment />
             <FriendsList />
             <HubsList />
+            <MeetingsList />
+            <EventsList />
         </div>
     );
 }

@@ -20,5 +20,9 @@
     &__img {
         @include svg-size;
         @include svg-white;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }

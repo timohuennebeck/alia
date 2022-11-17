@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.events {
+    @include mobile-padding-background-cmp;
+    @include flex-column;
+    gap: $mobile-gap-default;
+
+    &__settings {
+        @include flex-vertical;
+        justify-content: space-between;
+
+        &-img {
+            @include svg-size;
+            @include svg-white;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__date {
+        color: $sec-color-2
+    }
+
+    &__list {
+        @include flex-column;
+        gap: $mobile-gap-default;
+    }
+}
