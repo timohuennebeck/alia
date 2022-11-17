@@ -50,6 +50,12 @@
     border-radius: 1.15rem;
 }
 
+@mixin mobile-padding-background-cmp {
+    background-color: $prim-color-2;
+    padding: 1.25rem;
+    border-radius: 1.15rem;
+}
+
 @mixin bright-mobile-padding-background {
     background-color: $prim-color-3;
     padding: $mobile-padding-default;

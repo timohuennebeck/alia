@@ -1,0 +1,58 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment {
+    @include mobile-padding-background-cmp;
+    display: flex;
+    gap: $mobile-gap-default-cmp;
+
+    &__profile {
+        width: 3.25rem;
+        height: 3.25rem;
+        border-radius: 50%;
+        border: 0.5px solid $sec-color-1;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+
+    &__info {
+        @include flex-column;
+        gap: $mobile-gap-default-cmp;
+
+        &-ctn {
+            display: flex;
+            justify-content: space-between;
+
+            &-name {
+                @include flex-column;
+                gap: 0.25rem;
+
+                &-username {
+                    color: $sec-color-2;
+                }
+            }
+
+            &-img {
+                @include svg-size;
+                @include svg-white;
+            }
+        }
+
+        &-share {
+            @include flex-vertical;
+            gap: $mobile-gap-default;
+
+            &-buttons {
+                @include flex-vertical;
+                gap: $mobile-gap-default;
+            }
+
+            &-amount {
+                color: $sec-color-2;
+            }
+        }
+    }
+}

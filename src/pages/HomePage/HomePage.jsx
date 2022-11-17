@@ -13,6 +13,7 @@ import profileImg from "../../assets/images/melanie-perkins.jpg";
 // components
 import MobileHeader from "../../components/MobileHeader/MobileHeader";
 import InputField from "../../components/InputField/InputField";
+import NewComment from "../../components/NewComment/NewComment";
 
 export default function HomePage() {
     return (
@@ -44,6 +45,9 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+            <NewComment />
+            <NewComment />
+            <NewComment />
         </div>
     );
 }

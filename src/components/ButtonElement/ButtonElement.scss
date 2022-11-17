@@ -1,0 +1,14 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.button {
+    @include bright-mobile-padding-background;
+    @include flex-vertical;
+    gap: $mobile-gap-default;
+    max-height: 2.75rem;
+
+    &__img {
+        @include svg-size;
+        @include svg-white;
+    }
+}
