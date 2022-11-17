@@ -1,0 +1,42 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.mobile {
+    display: flex;
+    gap: 1rem;
+
+    &__menu {
+        @include flex-vertical;
+        @include mobile-padding-background;
+
+        &-svg {
+            @include svg-white;
+            width: 2rem;
+            height: 2rem;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__nav {
+        @include flex-vertical;
+        @include mobile-padding-background;
+        gap: $mobile-gap-default;
+
+        &-watch,
+        &-docx,
+        &-more {
+            @include svg-white;
+            width: 2rem;
+            height: 2rem;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+}

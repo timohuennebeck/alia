@@ -34,3 +34,13 @@
     display: flex;
     align-items: center;
 }
+
+@mixin svg-white {
+    filter: brightness(0) invert(1);
+}
+
+@mixin mobile-padding-background {
+    background-color: $prim-color-2;
+    padding: $mobile-padding-default;
+    border-radius: 1.25rem;
+}
