@@ -1,0 +1,31 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.home {
+    &__explore {
+        @include mobile-padding-background;
+        @include flex-vertical;
+        min-height: 3.25rem;
+
+        &-input {
+            padding-left: 1rem;
+            background-color: $prim-color-2;
+            border: none;
+            outline: none;
+        }
+    }
+
+    &__share {
+        &-img {
+            width: 3.25rem;
+            height: 3.25rem;
+            border-radius: 50%;
+            border: 0.5px solid $sec-color-1;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+}

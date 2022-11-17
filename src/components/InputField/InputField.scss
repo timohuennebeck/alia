@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.input {
+    @include flex-vertical;
+    background-color: $prim-color-3;
+    padding: $mobile-padding-default;
+    border-radius: 1.15rem;
+    min-height: 3.25rem;
+
+    &__placeholder {
+        padding-left: 1rem;
+        background-color: $prim-color-3;
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            color: $sec-color-1;
+        }
+    }
+}

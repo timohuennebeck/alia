@@ -3,7 +3,8 @@
 
 .mobile {
     display: flex;
-    gap: 1rem;
+    max-height: 3.5rem;
+    justify-content: space-between;
 
     &__menu {
         @include flex-vertical;
@@ -11,8 +12,7 @@
 
         &-svg {
             @include svg-white;
-            width: 2rem;
-            height: 2rem;
+            @include svg-size;
 
             &:hover {
                 cursor: pointer;
@@ -30,8 +30,25 @@
         &-docx,
         &-more {
             @include svg-white;
-            width: 2rem;
-            height: 2rem;
+            @include svg-size;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__profile {
+        @include flex-vertical;
+        @include mobile-padding-background;
+        gap: $mobile-gap-default;
+
+        &-img {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: 0.5px solid $sec-color-1;
 
             &:hover {
                 cursor: pointer;

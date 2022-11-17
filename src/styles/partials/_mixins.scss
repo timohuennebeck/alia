@@ -39,8 +39,13 @@
     filter: brightness(0) invert(1);
 }
 
+@mixin svg-size {
+    width: 2rem;
+    height: 2rem;
+}
+
 @mixin mobile-padding-background {
     background-color: $prim-color-2;
     padding: $mobile-padding-default;
-    border-radius: 1.25rem;
+    border-radius: 1.15rem;
 }
