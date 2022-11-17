@@ -30,19 +30,30 @@
             display: flex;
             justify-content: space-between;
 
+            &-img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
             &-name {
                 @include flex-vertical;
                 gap: $mobile-gap-default;
 
                 &-img {
-                    width: 2.25rem;
-                    height: 2.25rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
                     border-radius: 50%;
                     border: 0.5px solid $sec-color-1;
                 }
 
-                &-username {
-                    color: $sec-color-2;
+                &-indv {
+                    @include flex-column;
+                    gap: 0.15rem;
+
+                    &-username {
+                        color: $sec-color-2;
+                    }
                 }
             }
 
@@ -58,6 +69,10 @@
 
             &-amount {
                 color: $sec-color-2;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 

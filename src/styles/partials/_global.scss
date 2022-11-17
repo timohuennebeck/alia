@@ -7,6 +7,11 @@ html {
     background-color: $prim-color-1;
     padding: 1.25rem;
 
+    @include tablet {
+        max-width: 52.5rem;
+        margin: auto;
+    }
+
     @include desktop {
         padding: 3.25rem;
     }

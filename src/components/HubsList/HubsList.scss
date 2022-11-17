@@ -1,0 +1,13 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.hubs {
+    @include mobile-padding-background-cmp;
+    @include flex-column;
+    gap: $mobile-gap-default;
+
+    &__list {
+        @include flex-column;
+        gap: $mobile-gap-default;
+    }
+}

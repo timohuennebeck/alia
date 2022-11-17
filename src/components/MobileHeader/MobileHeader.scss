@@ -64,4 +64,10 @@
             }
         }
     }
+
+    &__card-modal {
+        padding: 1.25rem;
+        height: 100%;
+        background-color: $prim-color-1;
+    }
 }

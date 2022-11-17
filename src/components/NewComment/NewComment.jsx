@@ -36,6 +36,7 @@ export default function NewComment() {
                         <ButtonElement img={watchImg} name="Watch" />
                         <ButtonElement img={commentsImg} name="Comment" />
                     </div>
+                    <p className="comment__info-share-amount">7 Comments</p>
                 </div>
             </div>
         </div>

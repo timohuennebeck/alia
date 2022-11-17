@@ -1,0 +1,31 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.mobile-header {
+    @include flex-column;
+    gap: $mobile-gap-default-cmp;
+
+    &__img {
+        @include svg-size;
+        @include svg-white;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05)
+        }
+    }
+
+    &__links {
+        @include flex-column;
+        gap: $mobile-gap-default-cmp;
+
+        &-indv {
+            text-decoration: none;
+
+            &:hover {
+                transform: scale(1.025);
+                font-weight: 700;
+            }
+        }
+    }
+}

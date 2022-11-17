@@ -7,6 +7,11 @@
     gap: $mobile-gap-default;
     max-height: 2.75rem;
 
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05)
+    }
+
     &__img {
         @include svg-size;
         @include svg-white;

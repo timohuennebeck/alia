@@ -18,6 +18,34 @@
         }
     }
 
+    &__channel {
+        @include mobile-padding-background-cmp;
+        @include flex-column;
+        gap: $mobile-gap-default-cmp;
+        text-align: center;
+
+        &-content {
+            @include flex-column;
+            gap: 0.25rem;
+
+            &-text {
+                color: $sec-color-2;
+            }
+        }
+
+        &-images {
+            @include flex-vertical;
+            justify-content: space-around;
+
+            &-ctn {
+                &-indv {
+                    @include svg-size;
+                    @include svg-white;
+                }
+            }
+        }
+    }
+
     &__share {
         @include mobile-padding-background-cmp;
         display: flex;
@@ -53,6 +81,11 @@
                 &-indv {
                     @include bright-mobile-padding-background;
                     @include flex;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
 
                     &-icon {
                         @include svg-size;
