@@ -14,22 +14,28 @@ export default function NewComment() {
             <div className="comment__info">
                 <div className="comment__info-ctn">
                     <div className="comment__info-ctn-name">
-                        <h5 className="comment__info-ctn-name-header">Melanie Perkins</h5>
-                        <p className="comment__info-ctn-name-username">@melanieperkins</p>
+                        <img className="comment__info-ctn-name-img" src={profileImg} alt="" />
+                        <div className="comment__info-ctn-name-indv">
+                            <h5 className="comment__info-ctn-name-indv-header">Melanie Perkins</h5>
+                            <p className="comment__info-ctn-name-indv-username">@melanieperkins</p>
+                        </div>
                     </div>
                     <img className="comment__info-ctn-img" src={moreImg} alt="" />
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                </p>
+                <div className="comment__info-content">
+                    <p className="comment__info-content-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat...
+                    </p>
+                    <p className="comment__info-content-amount">7 Comments</p>
+                </div>
                 <div className="comment__info-share">
                     <div className="comment__info-share-buttons">
                         <ButtonElement img={watchImg} name="Watch" />
                         <ButtonElement img={commentsImg} name="Comment" />
                     </div>
-                    <p className="comment__info-share-amount">7 Comments</p>
                 </div>
             </div>
         </div>

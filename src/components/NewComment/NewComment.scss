@@ -7,14 +7,18 @@
     gap: $mobile-gap-default-cmp;
 
     &__profile {
-        width: 3.25rem;
-        height: 3.25rem;
-        border-radius: 50%;
-        border: 0.5px solid $sec-color-1;
+        display: none;
 
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.05);
+        @include tablet {
+            width: 3.25rem;
+            height: 3.25rem;
+            border-radius: 50%;
+            border: 0.5px solid $sec-color-1;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
         }
     }
 
@@ -27,8 +31,15 @@
             justify-content: space-between;
 
             &-name {
-                @include flex-column;
-                gap: 0.25rem;
+                @include flex-vertical;
+                gap: $mobile-gap-default;
+
+                &-img {
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    border-radius: 50%;
+                    border: 0.5px solid $sec-color-1;
+                }
 
                 &-username {
                     color: $sec-color-2;
@@ -38,6 +49,15 @@
             &-img {
                 @include svg-size;
                 @include svg-white;
+            }
+        }
+
+        &-content {
+            @include flex-column;
+            gap: $mobile-gap-default;
+
+            &-amount {
+                color: $sec-color-2;
             }
         }
 
@@ -51,6 +71,7 @@
             }
 
             &-amount {
+                display: none;
                 color: $sec-color-2;
             }
         }
