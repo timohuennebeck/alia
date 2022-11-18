@@ -2,10 +2,12 @@ import "./App.scss";
 
 // components
 import HomePage from "./pages/HomePage/HomePage";
-import EventsPage from "./pages/EventsPage/EventsPage";
-import MeetingsPage from "./pages/MeetingsPage/MeetingsPage";
+import UpcomingEventsPage from "./pages/UpcomingEventsPage/UpcomingEventsPage";
+import UpcomingMeetingsPage from "./pages/UpcomingMeetingsPage/UpcomingMeetingsPage";
 import HubsPage from "./pages/HubsPage/HubsPage";
 import FriendsPage from "./pages/FriendsPage/FriendsPage";
+import MeetingsPage from "./pages/MeetingsPage/MeetingsPage.jsx"
+import EventsPage from "./pages/EventsPage/EventsPage"
 
 // libraries
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -27,14 +29,16 @@ function App() {
                         <Route path="/friends" element={<FriendsPage />} />
                         <Route path="/trending" element={<TrendingPage />} />
                         <Route path="/hubs" element={<HubsPage />} />
-                        <Route path="/meetings" element={<MeetingsPage />} />
-                        <Route path="/events" element={<EventsPage />} />
+                        <Route path="/upcoming-meetings" element={<UpcomingMeetingsPage />} />
+                        <Route path="/upcoming-events" element={<UpcomingEventsPage />} />
                     </Route>
                     <Route element={<SearchInterfaceLYT />}>
                         <Route path="/comments" element={<CommentsPage />} />
                         <Route path="/profile" element={<ProfilePage />} />
-                        <Route path="/friends-profile" element={<FriendsProfilePage />}/>
-                        <Route path="/files" element={<FilesPage />}/>
+                        <Route path="/friends-profile" element={<FriendsProfilePage />} />
+                        <Route path="/files" element={<FilesPage />} />
+                        <Route path="/meetings" element={<MeetingsPage />} />
+                        <Route path="/events" element={<EventsPage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

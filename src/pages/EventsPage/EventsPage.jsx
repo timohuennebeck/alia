@@ -1,21 +1,23 @@
+import ButtonElementDark from "../../components/ButtonElementDark/ButtonElementDark";
 import "./EventsPage.scss";
 
-// images
-import cogImg from "../../assets/icons/cog.svg"
-import EventsElement from "../../components/EventsElement/EventsElement"
+import recentImg from "../../assets/icons/history.svg";
+import favoriteImg from "../../assets/icons/heart.svg";
+import InformationExplorerLine from "../../components/InformationExplorerLine/InformationExplorerLine";
 
 export default function EventsPage() {
     return (
         <div className="events">
-            <div className="events__settings">
-                <h3 className="events__settings-header">Upcoming Events</h3>
-                <img className="events__settings-img" src={cogImg} alt="" />
+            <div className="events__buttons">
+                <ButtonElementDark img={recentImg} name="Recent" />
+                <ButtonElementDark img={favoriteImg} name="Favorites" />
             </div>
-            <p className="events__date">TODAY</p>
-            <div className="events__list">
-                <EventsElement />
-                <EventsElement />
-                <EventsElement />
+            <div className="events__information">
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
             </div>
         </div>
     );

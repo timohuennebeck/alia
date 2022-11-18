@@ -1,19 +1,23 @@
+import ButtonElementDark from "../../components/ButtonElementDark/ButtonElementDark";
 import "./MeetingsPage.scss";
 
-// images
-import cogImg from "../../assets/icons/cog.svg";
-import MeetingsElement from "../../components/MeetingsElement/MeetingsElement";
+import recentImg from "../../assets/icons/history.svg";
+import favoriteImg from "../../assets/icons/heart.svg";
+import InformationExplorerLine from "../../components/InformationExplorerLine/InformationExplorerLine";
 
 export default function MeetingsPage() {
     return (
         <div className="meetings">
-            <div className="meetings__settings">
-                <h3 className="meetings__settings-header">Upcoming Meetings</h3>
-                <img className="meetings__settings-img" src={cogImg} alt="" />
+            <div className="meetings__buttons">
+                <ButtonElementDark img={recentImg} name="Recent" />
+                <ButtonElementDark img={favoriteImg} name="Favorites" />
             </div>
-            <p className="meetings__date">TODAY</p>
-            <div className="meetings__list">
-                <MeetingsElement />
+            <div className="meetings__information">
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
             </div>
         </div>
     );

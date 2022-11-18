@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.information {
+.hubs-explorer {
     @include mobile-padding-background;
     @include flex-vertical;
     padding: 0 1.75rem;

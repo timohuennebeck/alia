@@ -2,30 +2,15 @@
 @use "../../styles/partials/variables" as *;
 
 .meetings {
-    @include mobile-padding-background-cmp;
     @include flex-column;
     gap: $mobile-gap-default;
 
-    &__settings {
+    &__buttons {
         @include flex-vertical;
-        justify-content: space-between;
-
-        &-img {
-            @include svg-size;
-            @include svg-white;
-
-            &:hover {
-                cursor: pointer;
-                transform: scale(1.05);
-            }
-        }
+        gap: $mobile-gap-default;
     }
 
-    &__date {
-        color: $sec-color-2
-    }
-
-    &__list {
+    &__information {
         @include flex-column;
         gap: $mobile-gap-default;
     }

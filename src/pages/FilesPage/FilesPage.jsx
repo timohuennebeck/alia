@@ -3,7 +3,7 @@ import "./FilesPage.scss";
 
 import recentImg from "../../assets/icons/history.svg";
 import favoriteImg from "../../assets/icons/heart.svg";
-import InformationLine from "../../components/InformationLine/InformationLine";
+import InformationExplorerLine from "../../components/InformationExplorerLine/InformationExplorerLine";
 
 export default function FilesPage() {
     return (
@@ -13,11 +13,11 @@ export default function FilesPage() {
                 <ButtonElementDark img={favoriteImg} name="Favorites" />
             </div>
             <div className="files__information">
-                <InformationLine />
-                <InformationLine />
-                <InformationLine />
-                <InformationLine />
-                <InformationLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
+                <InformationExplorerLine />
             </div>
         </div>
     );
