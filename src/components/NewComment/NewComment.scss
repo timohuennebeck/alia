@@ -30,12 +30,6 @@
             display: flex;
             justify-content: space-between;
 
-            &-img {
-                &:hover {
-                    cursor: pointer;
-                }
-            }
-
             &-name {
                 @include flex-vertical;
                 gap: $mobile-gap-default;
@@ -69,6 +63,10 @@
             &-img {
                 @include svg-size;
                 @include svg-white;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 
