@@ -14,6 +14,7 @@ import TrendingPage from "./pages/TrendingPage/TrendingPage";
 import SearchInterfaceLYT from "./components/SearchInterfaceLYT/SearchInterfaceLYT";
 import CommentsPage from "./pages/WatchCommentsPage.jsx/WatchCommentsPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import FriendsProfilePage from "./pages/FriendsProfilePage/FriendsProfilePage";
 
 function App() {
     return (
@@ -31,6 +32,7 @@ function App() {
                     <Route element={<SearchInterfaceLYT />}>
                         <Route path="/comments" element={<CommentsPage />} />
                         <Route path="/profile" element={<ProfilePage />} />
+                        <Route path="/friends-profile" element={<FriendsProfilePage />}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

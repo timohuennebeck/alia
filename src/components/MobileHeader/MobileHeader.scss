@@ -6,6 +6,11 @@
     max-height: 3.5rem;
     justify-content: space-between;
 
+    @include tablet {
+        justify-content: flex-start;
+        gap: $mobile-gap-default;
+    }
+
     &__menu {
         @include flex;
         @include mobile-padding-background;

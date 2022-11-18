@@ -11,7 +11,7 @@
 
         &:hover {
             cursor: pointer;
-            transform: scale(1.05)
+            transform: scale(1.05);
         }
     }
 
@@ -23,7 +23,6 @@
             text-decoration: none;
 
             &:hover {
-                transform: scale(1.025);
                 font-weight: 700;
             }
         }

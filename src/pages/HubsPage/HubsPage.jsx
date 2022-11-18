@@ -7,6 +7,10 @@ export default function HubsPage() {
             <h3>Favorite Hubs</h3>
             <div className="hubs__list">
                 <HubsElement />
+                <HubsElement />
+                <HubsElement />
+                <HubsElement />
+                <HubsElement />
             </div>
         </div>
     );

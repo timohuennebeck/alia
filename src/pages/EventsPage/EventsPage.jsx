@@ -14,6 +14,8 @@ export default function EventsPage() {
             <p className="events__date">TODAY</p>
             <div className="events__list">
                 <EventsElement />
+                <EventsElement />
+                <EventsElement />
             </div>
         </div>
     );
