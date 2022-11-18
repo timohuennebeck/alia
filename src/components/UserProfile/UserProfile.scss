@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.comment {
+.user {
     @include mobile-padding-background-cmp;
     display: flex;
     gap: $mobile-gap-default-cmp;
@@ -69,19 +69,6 @@
             &-img {
                 @include svg-size;
                 @include svg-white;
-            }
-        }
-
-        &-content {
-            @include flex-column;
-            gap: $mobile-gap-default;
-
-            &-amount {
-                color: $sec-color-2;
-
-                &:hover {
-                    cursor: pointer;
-                }
             }
         }
 

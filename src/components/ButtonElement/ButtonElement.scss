@@ -6,7 +6,6 @@
     @include flex;
     gap: $mobile-gap-default;
     max-height: 2.75rem;
-    width: 100%;
 
     &:hover {
         cursor: pointer;
@@ -16,5 +15,9 @@
     &__img {
         @include svg-size;
         @include svg-white;
+    }
+
+    &__text {
+        flex-shrink: 0;
     }
 }

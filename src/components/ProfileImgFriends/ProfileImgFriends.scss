@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.friends-img {
+    @include flex-vertical;
+    @include mobile-padding-background;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    &__indv {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: 0.5px solid $sec-color-1;
+    }
+}

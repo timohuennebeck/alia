@@ -13,6 +13,7 @@ import UserInterfaceLYT from "./components/UserInterfaceLYT/UserInterfaceLYT";
 import TrendingPage from "./pages/TrendingPage/TrendingPage";
 import SearchInterfaceLYT from "./components/SearchInterfaceLYT/SearchInterfaceLYT";
 import CommentsPage from "./pages/WatchCommentsPage.jsx/WatchCommentsPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                     </Route>
                     <Route element={<SearchInterfaceLYT />}>
                         <Route path="/comments" element={<CommentsPage />} />
+                        <Route path="/profile" element={<ProfilePage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

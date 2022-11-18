@@ -29,9 +29,6 @@ export default function MobileHeaderLinks({ closeModal }) {
                 <Link className="mobile-header__links-indv" to="/events">
                     Upcoming Events
                 </Link>
-                <Link className="mobile-header__links-indv" to="/comments">
-                    Saved Comments
-                </Link>
             </div>
         </div>
     );
