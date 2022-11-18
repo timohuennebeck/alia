@@ -15,6 +15,7 @@ import SearchInterfaceLYT from "./components/SearchInterfaceLYT/SearchInterfaceL
 import CommentsPage from "./pages/WatchCommentsPage.jsx/WatchCommentsPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import FriendsProfilePage from "./pages/FriendsProfilePage/FriendsProfilePage";
+import FilesPage from "./pages/FilesPage/FilesPage";
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
                         <Route path="/comments" element={<CommentsPage />} />
                         <Route path="/profile" element={<ProfilePage />} />
                         <Route path="/friends-profile" element={<FriendsProfilePage />}/>
+                        <Route path="/files" element={<FilesPage />}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

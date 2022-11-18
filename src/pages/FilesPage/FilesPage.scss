@@ -1,0 +1,17 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.files {
+    @include flex-column;
+    gap: $mobile-gap-default;
+
+    &__buttons {
+        @include flex-vertical;
+        gap: $mobile-gap-default;
+    }
+
+    &__information {
+        @include flex-column;
+        gap: $mobile-gap-default;
+    }
+}
