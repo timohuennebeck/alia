@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.mobile-header {
+.header-links {
     @include flex-column;
     gap: $mobile-gap-default-cmp;
 
