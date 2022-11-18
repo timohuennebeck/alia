@@ -1,10 +1,10 @@
-import "./EventsList.scss";
+import "./EventsPage.scss";
 
 // images
 import cogImg from "../../assets/icons/cog.svg"
-import EventsElement from "../EventsElement/EventsElement";
+import EventsElement from "../../components/EventsElement/EventsElement"
 
-export default function EventsList() {
+export default function EventsPage() {
     return (
         <div className="events">
             <div className="events__settings">

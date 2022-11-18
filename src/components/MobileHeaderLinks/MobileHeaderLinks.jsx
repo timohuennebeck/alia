@@ -12,16 +12,19 @@ export default function MobileHeaderLinks({ closeModal }) {
             <img className="mobile-header__img" src={menuImg} alt="" />
             <div className="mobile-header__links">
                 <Link className="mobile-header__links-indv" to="/">
-                    Profile
+                    Home
                 </Link>
-                <Link className="mobile-header__links-indv" to="/">
+                <Link className="mobile-header__links-indv" to="/friends">
+                    Friends
+                </Link>
+                <Link className="mobile-header__links-indv" to="/hubs">
                     Favorite Hubs
                 </Link>
-                <Link className="mobile-header__links-indv" to="/">
+                <Link className="mobile-header__links-indv" to="/meetings">
                     Upcoming Meetings
                 </Link>
-                <Link className="mobile-header__links-indv" to="/">
-                    Trending For You
+                <Link className="mobile-header__links-indv" to="/events">
+                    Upcoming Events
                 </Link>
             </div>
         </div>

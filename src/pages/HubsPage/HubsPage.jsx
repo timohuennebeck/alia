@@ -1,7 +1,7 @@
-import HubsElement from "../HubsElement/HubsElement";
-import "./HubsList.scss";
+import HubsElement from "../../components/HubsElement/HubsElement";
+import "./HubsPage.scss";
 
-export default function HubsList() {
+export default function HubsPage() {
     return (
         <div className="hubs">
             <h3>Favorite Hubs</h3>

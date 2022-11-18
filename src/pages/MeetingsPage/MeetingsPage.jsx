@@ -1,10 +1,10 @@
-import "./MeetingsList.scss";
+import "./MeetingsPage.scss";
 
 // images
-import cogImg from "../../assets/icons/cog.svg"
-import MeetingsElement from "../MeetingsElement/MeetingsElement";
+import cogImg from "../../assets/icons/cog.svg";
+import MeetingsElement from "../../components/MeetingsElement/MeetingsElement";
 
-export default function MeetingsList() {
+export default function MeetingsPage() {
     return (
         <div className="meetings">
             <div className="meetings__settings">

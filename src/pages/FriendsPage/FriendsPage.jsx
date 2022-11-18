@@ -1,7 +1,7 @@
-import FriendsElement from "../FriendsElement/FriendsElement";
-import "./FriendsList.scss";
+import FriendsElement from "../../components/FriendsElement/FriendsElement";
+import "./FriendsPage.scss";
 
-export default function FriendsList() {
+export default function FriendsPage() {
     return (
         <div className="friends">
             <h3>Friends</h3>
