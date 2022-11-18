@@ -1,0 +1,17 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments {
+    @include flex-column;
+    gap: $mobile-gap-default;
+
+    &__nav {
+        @include flex-vertical;
+        gap: $mobile-gap-default;
+    }
+
+    &__saved {
+        @include flex-column;
+        gap: $mobile-gap-default;
+    }
+}

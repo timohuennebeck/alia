@@ -17,6 +17,9 @@ export default function MobileHeaderLinks({ closeModal }) {
                 <Link className="mobile-header__links-indv" to="/friends">
                     Friends
                 </Link>
+                <Link className="mobile-header__links-indv" to="/trending">
+                    Trending Posts
+                </Link>
                 <Link className="mobile-header__links-indv" to="/hubs">
                     Favorite Hubs
                 </Link>
@@ -25,6 +28,9 @@ export default function MobileHeaderLinks({ closeModal }) {
                 </Link>
                 <Link className="mobile-header__links-indv" to="/events">
                     Upcoming Events
+                </Link>
+                <Link className="mobile-header__links-indv" to="/comments">
+                    Saved Comments
                 </Link>
             </div>
         </div>

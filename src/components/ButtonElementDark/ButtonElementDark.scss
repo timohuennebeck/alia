@@ -1,8 +1,8 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.button {
-    @include bright-mobile-padding-background;
+.button-dark {
+    @include mobile-padding-background;
     @include flex;
     gap: $mobile-gap-default;
     max-height: 2.75rem;
