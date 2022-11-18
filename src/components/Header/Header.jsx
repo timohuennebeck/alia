@@ -1,4 +1,4 @@
-import "./MobileHeader.scss";
+import "./Header.scss";
 
 // libraries
 import ReactModal from "react-modal";
@@ -12,7 +12,7 @@ import moreImg from "../../assets/icons/more-h.svg";
 
 // images
 import profileImg from "../../assets/images/melanie-perkins.jpg";
-import MobileHeaderLinks from "../MobileHeaderLinks/MobileHeaderLinks";
+import HeaderLinks from "../HeaderLinks/HeaderLinks";
 
 export default function MobileHeader() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -26,25 +26,25 @@ export default function MobileHeader() {
     }
 
     return (
-        <div className="mobile">
-            <div className="mobile__menu">
-                <img className="mobile__menu-svg" src={menuImg} alt="" onClick={openModal} />
+        <div className="header">
+            <div className="header__menu">
+                <img className="header__menu-svg" src={menuImg} alt="" onClick={openModal} />
             </div>
-            <div className="mobile__nav">
-                <img className="mobile__nav-watch" src={watchImg} alt="" />
-                <img className="mobile__nav-docx" src={docxImg} alt="" />
-                <img className="mobile__nav-more" src={moreImg} alt="" />
+            <div className="header__nav">
+                <img className="header__nav-watch" src={watchImg} alt="" />
+                <img className="header__nav-docx" src={docxImg} alt="" />
+                <img className="header__nav-more" src={moreImg} alt="" />
             </div>
-            <div className="mobile__profile">
-                <img className="mobile__profile-img" src={profileImg} alt="" />
-                <h5 className="mobile__profile-name">Melanie Perkins</h5>
+            <div className="header__profile">
+                <img className="header__profile-img" src={profileImg} alt="" />
+                <h5 className="header__profile-name">Melanie Perkins</h5>
             </div>
             <ReactModal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                className="mobile__card-modal"
+                className="header__card-modal"
             >
-                <MobileHeaderLinks closeModal={closeModal}/>
+                <HeaderLinks closeModal={closeModal}/>
             </ReactModal>
         </div>
     );

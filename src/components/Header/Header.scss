@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.mobile {
+.header {
     display: flex;
     max-height: 3.5rem;
     justify-content: space-between;
@@ -14,6 +14,10 @@
     &__menu {
         @include flex;
         @include mobile-padding-background;
+
+        @include desktop {
+            display: none;
+        }
 
         &-svg {
             @include svg-white;
@@ -48,6 +52,11 @@
         @include flex;
         @include mobile-padding-background;
         gap: $mobile-gap-default;
+
+        @include desktop {
+            width: 100%;
+            justify-content: flex-start;
+        }
 
         &-img {
             width: 2.5rem;

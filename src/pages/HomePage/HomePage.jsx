@@ -21,9 +21,16 @@ export default function HomePage() {
     return (
         <div className="home">
             <div className="home__channel">
-                <div className="home__channel-content">
-                    <h4 className="home__channel-content-header">You are exploring "News"!</h4>
-                    <p className="home__channel-content-text">2 Participants In a Huddle...</p>
+                <div className="home__channel-ctn">
+                    <div className="home__channel-ctn-emblem"></div>
+                    <div className="home__channel-ctn-content">
+                        <h4 className="home__channel-ctn-content-header">
+                            You are exploring "News"!
+                        </h4>
+                        <p className="home__channel-ctn-content-text">
+                            2 Participants In a Huddle...
+                        </p>
+                    </div>
                 </div>
                 <div className="home__channel-images">
                     <div className="home__channel-images-ctn">
@@ -48,6 +55,7 @@ export default function HomePage() {
                                 src={paperImg}
                                 alt=""
                             />
+                            <p className="home__share-ctn-images-indv-text">Hello</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -55,6 +63,7 @@ export default function HomePage() {
                                 src={imagesImg}
                                 alt=""
                             />
+                            <p className="home__share-ctn-images-indv-text">Hello</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -62,6 +71,7 @@ export default function HomePage() {
                                 src={liveImg}
                                 alt=""
                             />
+                            <p className="home__share-ctn-images-indv-text">Hello</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -69,6 +79,7 @@ export default function HomePage() {
                                 src={clockImg}
                                 alt=""
                             />
+                            <p className="home__share-ctn-images-indv-text">Hello</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -76,10 +87,14 @@ export default function HomePage() {
                                 src={usersImg}
                                 alt=""
                             />
+                            <p className="home__share-ctn-images-indv-text">Hello</p>
                         </div>
                     </div>
                 </div>
             </div>
+            <NewComment />
+            <NewComment />
+            <NewComment />
             <NewComment />
             <NewComment />
             <NewComment />
