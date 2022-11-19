@@ -55,7 +55,7 @@ export default function HomePage() {
                                 src={paperImg}
                                 alt=""
                             />
-                            <p className="home__share-ctn-images-indv-text">Hello</p>
+                            <p className="home__share-ctn-images-indv-text">Attachments</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -63,7 +63,7 @@ export default function HomePage() {
                                 src={imagesImg}
                                 alt=""
                             />
-                            <p className="home__share-ctn-images-indv-text">Hello</p>
+                            <p className="home__share-ctn-images-indv-text">Media</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -71,7 +71,7 @@ export default function HomePage() {
                                 src={liveImg}
                                 alt=""
                             />
-                            <p className="home__share-ctn-images-indv-text">Hello</p>
+                            <p className="home__share-ctn-images-indv-text">Live</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -79,7 +79,7 @@ export default function HomePage() {
                                 src={clockImg}
                                 alt=""
                             />
-                            <p className="home__share-ctn-images-indv-text">Hello</p>
+                            <p className="home__share-ctn-images-indv-text">Poll</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -87,7 +87,7 @@ export default function HomePage() {
                                 src={usersImg}
                                 alt=""
                             />
-                            <p className="home__share-ctn-images-indv-text">Hello</p>
+                            <p className="home__share-ctn-images-indv-text">Meeting</p>
                         </div>
                     </div>
                 </div>

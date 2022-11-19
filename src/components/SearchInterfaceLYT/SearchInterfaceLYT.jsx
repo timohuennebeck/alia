@@ -31,6 +31,10 @@ export default function SearchInterfaceLYT() {
                     <FavoriteHubsPage />
                 </div>
                 <div className="search__desktop-main">
+                    <div className="search__desktop-main-explore">
+                        <img className="search__desktop-main-explore-img" src={searchImg} alt="" />
+                        <input className="search__desktop-main-explore-input" placeholder="Search..." />
+                    </div>
                     <Outlet />
                 </div>
                 <div className="search__desktop-right">

@@ -10,8 +10,9 @@
         display: none;
 
         @include tablet {
-            width: 3.25rem;
-            height: 3.25rem;
+            display: block;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             border: 0.5px solid $sec-color-1;
 
@@ -43,6 +44,10 @@
                     height: 2.5rem;
                     border-radius: 50%;
                     border: 0.5px solid $sec-color-1;
+
+                    @include tablet {
+                        display: none;
+                    }
 
                     &:hover {
                         cursor: pointer;
@@ -77,6 +82,10 @@
             &-amount {
                 color: $sec-color-2;
 
+                @include tablet {
+                    display: none;
+                }
+
                 &:hover {
                     cursor: pointer;
                 }
@@ -87,6 +96,10 @@
             @include flex-vertical;
             gap: $mobile-gap-default;
 
+            @include tablet {
+                justify-content: space-between;
+            }
+
             &-buttons {
                 @include flex-vertical;
                 gap: $mobile-gap-default;
@@ -94,7 +107,12 @@
 
             &-amount {
                 display: none;
-                color: $sec-color-2;
+
+                @include tablet {
+                    display: block;
+                    cursor: pointer;
+                    color: $sec-color-2;
+                }
             }
         }
     }
