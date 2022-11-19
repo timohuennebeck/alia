@@ -5,42 +5,56 @@
     @include flex-column;
     gap: $mobile-gap-default;
 
+    @include desktop {
+        flex-direction: row;
+    }
+
     &__friends {
         @include flex-vertical;
         gap: $mobile-gap-default;
         overflow: scroll;
+
+        @include desktop {
+            flex-direction: column;
+            overflow: visible;
+        }
 
         &::-webkit-scrollbar {
             display: none;
         }
     }
 
-    &__posts {
-        @include mobile-padding-background-cmp;
-        @include flex-vertical;
-        justify-content: space-between;
+    &__ctn {
+        @include flex-column;
+        gap: $mobile-gap-default;
 
-        &-content {
-            @include flex-column;
-            gap: 0.25rem;
-
-            &-amount {
-                color: $sec-color-2;
-            }
-        }
-
-        &-images {
-            @include bright-mobile-padding-background;
+        &-posts {
+            @include mobile-padding-background-cmp;
             @include flex-vertical;
-            gap: $mobile-gap-default;
+            justify-content: space-between;
 
-            &-indv {
-                @include svg-size;
-                @include svg-white;
+            &-content {
+                @include flex-column;
+                gap: 0.25rem;
 
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.05);
+                &-amount {
+                    color: $sec-color-2;
+                }
+            }
+
+            &-images {
+                @include bright-mobile-padding-background;
+                @include flex-vertical;
+                gap: $mobile-gap-default;
+
+                &-indv {
+                    @include svg-size;
+                    @include svg-white;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
                 }
             }
         }

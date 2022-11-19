@@ -4,6 +4,8 @@ import "./UpcomingMeetingsPage.scss";
 import cogImg from "../../assets/icons/cog.svg";
 import MeetingsElement from "../../components/MeetingsElement/MeetingsElement";
 
+import { Link } from "react-router-dom";
+
 export default function UpcomingMeetingsPage() {
     return (
         <div className="upcoming-meetings">
@@ -15,6 +17,7 @@ export default function UpcomingMeetingsPage() {
             <div className="upcoming-meetings__list">
                 <MeetingsElement />
             </div>
+            <Link className="upcoming-meetings__more" to="/meetings">Show More</Link>
         </div>
     );
 }

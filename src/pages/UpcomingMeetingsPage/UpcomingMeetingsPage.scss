@@ -22,11 +22,18 @@
     }
 
     &__date {
-        color: $sec-color-2
+        color: $sec-color-2;
     }
 
     &__list {
         @include flex-column;
         gap: $mobile-gap-default;
+    }
+
+    &__more {
+        font-size: 0.8125rem;
+        text-decoration: none;
+        font-weight: 700;
+        color: $sec-color-3;
     }
 }

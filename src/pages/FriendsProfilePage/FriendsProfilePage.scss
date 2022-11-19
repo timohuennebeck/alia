@@ -9,52 +9,75 @@
         @include flex-vertical;
         gap: $mobile-gap-default;
 
-        &-more {
+        &-mobile,
+        &-desktop {
+            width: 100%;
+        }
+
+        &-desktop {
             display: none;
 
             @include tablet {
-                @include flex-vertical;
-                gap: $mobile-gap-default;
+                display: block;
             }
         }
     }
 
-    &__friends {
-        @include flex-vertical;
+    &__align {
+        @include flex-column;
         gap: $mobile-gap-default;
-        overflow: scroll;
 
-        &::-webkit-scrollbar {
-            display: none;
-        }
-    }
-
-    &__posts {
-        @include mobile-padding-background-cmp;
-        @include flex-vertical;
-        justify-content: space-between;
-
-        &-content {
-            @include flex-column;
-            gap: 0.25rem;
-
-            &-amount {
-                color: $sec-color-2;
-            }
+        @include desktop {
+            flex-direction: row;
         }
 
-        &-images {
-            @include bright-mobile-padding-background;
+        &-friends {
             @include flex-vertical;
             gap: $mobile-gap-default;
+            overflow: scroll;
 
-            &-indv {
-                @include svg-size;
-                @include svg-white;
+            @include desktop {
+                flex-direction: column;
+                overflow: visible;
+            }
 
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.05);
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &-right {
+            @include flex-column;
+            gap: $mobile-gap-default;
+
+            &-posts {
+                @include mobile-padding-background-cmp;
+                @include flex-vertical;
+                justify-content: space-between;
+
+                &-content {
+                    @include flex-column;
+                    gap: 0.25rem;
+
+                    &-amount {
+                        color: $sec-color-2;
+                    }
+                }
+
+                &-images {
+                    @include bright-mobile-padding-background;
+                    @include flex-vertical;
+                    gap: $mobile-gap-default;
+
+                    &-indv {
+                        @include svg-size;
+                        @include svg-white;
+
+                        &:hover {
+                            cursor: pointer;
+                            transform: scale(1.05);
+                        }
+                    }
                 }
             }
         }

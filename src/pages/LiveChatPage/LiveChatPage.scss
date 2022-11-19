@@ -6,11 +6,25 @@
     @include flex-column;
     justify-content: space-between;
     gap: $mobile-gap-default;
-    height: 95vh;
+    height: 96.75vh;
 
     &__buttons {
         display: flex;
         justify-content: space-between;
+
+        @include desktop {
+            justify-content: flex-start;
+            gap: $mobile-gap-default;
+        }
+
+        &-arrow,
+        &-messages,
+        &-users {
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
 
         &-arrow {
             @include flex-vertical;
@@ -62,6 +76,11 @@
 
             &-indv {
                 @include bright-mobile-padding-background;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
 
                 &-img {
                     @include svg-size;

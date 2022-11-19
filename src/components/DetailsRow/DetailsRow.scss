@@ -8,10 +8,6 @@
     min-height: 3.5rem;
     justify-content: space-between;
 
-    @include desktop {
-        background-color: $prim-color-3;
-    }
-
     &:hover {
         cursor: pointer;
         transform: scale(1.025);

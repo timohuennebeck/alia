@@ -66,11 +66,8 @@
 
             @include desktop {
                 @include flex-column;
-                @include mobile-padding-background;
                 gap: $mobile-gap-default;
                 flex: 2.25 1 0;
-                // height: 100vh;
-                // overflow: scroll;
             }
 
             &-explore {
@@ -80,14 +77,14 @@
                     @include mobile-padding-background;
                     @include flex-vertical;
                     min-height: 3.25rem;
-                    background-color: $prim-color-3;
+                    background-color: $prim-color-2;
 
                     &-img {
                         filter: brightness(0) invert(0.5);
                     }
 
                     &-input {
-                        background-color: $prim-color-3;
+                        background-color: $prim-color-2;
                         padding-left: 1rem;
                         border: none;
                         outline: none;

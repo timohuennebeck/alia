@@ -2,105 +2,130 @@
 @use "../../styles/partials/variables" as *;
 
 .huddle {
-    @include flex-column;
+    display: flex;
     gap: $mobile-gap-default;
 
-    &__hide {
-        @include mobile-padding-background;
-        @include flex-vertical;
-        gap: $mobile-gap-default;
-    }
-
-    &__interface {
+    &__left {
         @include flex-column;
-        padding: $mobile-padding-default;
-        height: 75vh;
-        background-image: url("../../assets/images/huddle-video.jpg");
-        background-size: cover;
-        background-position: center;
-        border-radius: 1.15rem;
-        justify-content: space-between;
+        gap: $mobile-gap-default;
+        flex: 1 1 0;
 
-        &-top {
-            display: flex;
+        &-hide {
+            @include mobile-padding-background;
+            @include flex-vertical;
+            gap: $mobile-gap-default;
+        }
+
+        &-interface {
+            @include flex-column;
+            padding: $mobile-padding-default;
+            height: 85vh;
+            background-image: url("../../assets/images/huddle-video.jpg");
+            background-size: cover;
+            background-position: center;
+            border-radius: 1.15rem;
             justify-content: space-between;
 
-            &-chat {
-                @include flex-column;
-                gap: $mobile-gap-default;
+            &-top {
+                display: flex;
+                justify-content: space-between;
 
-                &-time,
-                &-img {
-                    background-color: rgb(40, 52, 62, 0.5);
-                }
+                &-chat {
+                    @include flex-column;
+                    gap: $mobile-gap-default;
 
-                &-time {
-                    @include flex;
-                    border-radius: 0.5rem;
-                    width: 2.5rem;
-                    height: 1.5rem;
+                    &-time,
+                    &-img {
+                        background-color: rgb(40, 52, 62, 0.5);
+                    }
 
-                    &-indv {
-                        font-weight: 700;
+                    &-time {
+                        @include flex;
+                        border-radius: 0.5rem;
+                        width: 2.5rem;
+                        height: 1.5rem;
+
+                        &-indv {
+                            font-weight: 700;
+                        }
+                    }
+
+                    &-img {
+                        @include flex;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        border-radius: 0.75rem;
+
+                        &-indv {
+                            @include svg-white;
+                            @include svg-size;
+                        }
                     }
                 }
 
-                &-img {
-                    @include flex;
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    border-radius: 0.75rem;
+                &-users {
+                    @include flex-column;
+                    gap: $mobile-gap-default;
+                }
+            }
 
-                    &-indv {
+            &-nav {
+                @include flex;
+                gap: $mobile-gap-default;
+
+                &-indv {
+                    @include flex;
+                    background-color: $prim-color-3;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05)
+                    }
+
+                    &-img {
+                        @include svg-white;
+                        @include svg-size;
+                    }
+                }
+
+                &-end {
+                    @include flex;
+                    background-color: $sec-color-4;
+                    padding: 0.5rem;
+                    border-radius: 0.5rem;
+                    width: 3rem;
+                    height: 3rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05)
+                    }
+
+                    &-img {
                         @include svg-white;
                         @include svg-size;
                     }
                 }
             }
-
-            &-users {
-                @include flex-column;
-                gap: $mobile-gap-default;
-            }
         }
 
-        &-nav {
-            @include flex;
-            gap: $mobile-gap-default;
+        &-transcribe {
+            padding-left: $mobile-padding-default;
 
-            &-indv {
-                @include flex;
-                background-color: $prim-color-3;
-                padding: 0.5rem;
-                border-radius: 0.5rem;
-
-                &-img {
-                    @include svg-white;
-                    @include svg-size;
-                }
-            }
-
-            &-end {
-                @include flex;
-                background-color: $sec-color-4;
-                padding: 0.5rem;
-                border-radius: 0.5rem;
-                width: 3rem;
-                height: 3rem;
-
-                &-img {
-                    @include svg-white;
-                    @include svg-size;
-                }
+            &-header {
+                font-weight: 700;
             }
         }
     }
 
-    &__transcribe {
-        padding-left: $mobile-padding-default;
+    &__right {
+        display: none;
 
-        &-header {
-            font-weight: 700;
+        @include desktop {
+            display: block;
+            flex: 0.35 1 0;
         }
     }
 }
