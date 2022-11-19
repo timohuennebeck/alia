@@ -58,10 +58,10 @@
         }
 
         &-main {
+            width: 100%;
+
             @include desktop {
                 flex: 2.25 1 0;
-                // height: 100vh;
-                // overflow: scroll;
             }
         }
 

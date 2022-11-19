@@ -11,18 +11,44 @@
         gap: $mobile-gap-default-cmp;
         text-align: center;
 
-        &-content {
-            @include flex-column;
-            gap: 0.25rem;
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
-            &-text {
-                color: $sec-color-2;
+        &-ctn {
+            @include tablet {
+                @include flex-vertical;
+                gap: $mobile-gap-default-cmp;
+            }
+
+            &-emblem {
+                @include tablet {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 1.15rem;
+                    background-color: $prim-color-3;
+                }
+            }
+
+            &-content {
+                @include flex-column;
+                gap: 0.25rem;
+
+                &-text {
+                    color: $sec-color-2;
+                }
             }
         }
 
         &-images {
             @include flex-vertical;
             justify-content: space-around;
+
+            @include tablet {
+                @include bright-mobile-padding-background;
+                gap: $mobile-gap-default;
+            }
 
             &-ctn {
                 &-indv {
@@ -32,56 +58,6 @@
                     &:hover {
                         cursor: pointer;
                         transform: scale(1.05);
-                    }
-                }
-            }
-        }
-    }
-
-    &__share {
-        @include mobile-padding-background-cmp;
-        display: flex;
-        gap: $mobile-gap-default-cmp;
-        flex: 1 1 0;
-
-        &-img {
-            display: none;
-
-            @include tablet {
-                display: block;
-                width: 3.25rem;
-                height: 3.25rem;
-                border-radius: 50%;
-                border: 0.5px solid $sec-color-1;
-
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(1.05);
-                }
-            }
-        }
-
-        &-ctn {
-            @include flex-column;
-            gap: $mobile-gap-default-cmp;
-            flex: 1 1 0;
-
-            &-images {
-                @include flex-vertical;
-                justify-content: space-between;
-
-                &-indv {
-                    @include bright-mobile-padding-background;
-                    @include flex;
-
-                    &:hover {
-                        cursor: pointer;
-                        transform: scale(1.05);
-                    }
-
-                    &-icon {
-                        @include svg-size;
-                        @include svg-white;
                     }
                 }
             }

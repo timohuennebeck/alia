@@ -20,7 +20,6 @@ import FriendsProfilePage from "./pages/FriendsProfilePage/FriendsProfilePage";
 import FilesPage from "./pages/FilesPage/FilesPage";
 import HubsPage from "./pages/HubsPage/HubsPage";
 import HuddlePage from "./pages/HuddlePage/HuddlePage";
-import LiveChatPage from "./pages/LiveChatPage/LiveChatPage";
 
 function App() {
     return (
@@ -28,7 +27,6 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/huddle" element={<HuddlePage />} />
-                    <Route path="/live" element={<LiveChatPage />} />
                     <Route element={<UserInterfaceLYT />}>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/friends" element={<FriendsPage />} />

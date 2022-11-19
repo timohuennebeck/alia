@@ -4,6 +4,8 @@ import "./UpcomingEventsPage.scss";
 import cogImg from "../../assets/icons/cog.svg";
 import EventsElement from "../../components/EventsElement/EventsElement";
 
+import { Link } from "react-router-dom";
+
 export default function UpcomingEventsPage() {
     return (
         <div className="upcoming-events">
@@ -17,6 +19,7 @@ export default function UpcomingEventsPage() {
                 <EventsElement />
                 <EventsElement />
             </div>
+            <Link className="upcoming-events__more">Show More</Link>
         </div>
     );
 }

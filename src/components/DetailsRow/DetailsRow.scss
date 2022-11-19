@@ -31,6 +31,10 @@
             gap: $mobile-gap-default;
         }
 
+        @include desktop {
+            display: none;
+        }
+
         &-img {
             width: 1.75rem;
             height: 1.75rem;

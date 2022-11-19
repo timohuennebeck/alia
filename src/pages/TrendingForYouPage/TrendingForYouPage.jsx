@@ -3,6 +3,7 @@ import "./TrendingForYouPage.scss";
 // images
 import cogImg from "../../assets/icons/cog.svg";
 import MeetingsElement from "../../components/MeetingsElement/MeetingsElement";
+import { Link } from "react-router-dom";
 
 export default function TrendingForYouPage() {
     return (
@@ -22,6 +23,7 @@ export default function TrendingForYouPage() {
                 <MeetingsElement />
                 <MeetingsElement />
             </div>
+            <Link className="trending-sidebar__more">Show More</Link>
         </div>
     );
 }

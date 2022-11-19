@@ -62,10 +62,35 @@
         }
 
         &-main {
+            width: 100%;
+
             @include desktop {
+                @include flex-column;
+                gap: $mobile-gap-default;
                 flex: 2.25 1 0;
-                // height: 100vh;
-                // overflow: scroll;
+            }
+
+            &-explore {
+                display: none;
+
+                @include desktop {
+                    @include mobile-padding-background;
+                    @include flex-vertical;
+                    min-height: 3.25rem;
+                    background-color: $prim-color-2;
+
+                    &-img {
+                        filter: brightness(0) invert(0.5);
+                    }
+
+                    &-input {
+                        background-color: $prim-color-2;
+                        padding-left: 1rem;
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                    }
+                }
             }
         }
 

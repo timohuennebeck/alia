@@ -14,20 +14,29 @@ export default function ProfilePage() {
                 <ProfileImgFriends img={profileImg} />
                 <ProfileImgFriends img={profileImg} />
             </div>
-            <UserProfile />
-            <div className="personal-profile__posts">
-                <div className="personal-profile__posts-content">
-                    <h3 className="personal-profile__posts-content-header">Your Posts</h3>
-                    <p className="personal-profile__posts-content-amount">25 Posts</p>
+            <div className="personal-profile__ctn">
+                <UserProfile />
+                <div className="personal-profile__ctn-posts">
+                    <div className="personal-profile__ctn-posts-content">
+                        <h3 className="personal-profile__ctn-posts-content-header">Your Posts</h3>
+                        <p className="personal-profile__ctn-posts-content-amount">25 Posts</p>
+                    </div>
+                    <div className="personal-profile__ctn-posts-images">
+                        <img
+                            className="personal-profile__ctn-posts-images-indv"
+                            src={calendarImg}
+                            alt=""
+                        />
+                        <img
+                            className="personal-profile__ctn-posts-images-indv"
+                            src={moreImg}
+                            alt=""
+                        />
+                    </div>
                 </div>
-                <div className="personal-profile__posts-images">
-                    <img className="personal-profile__posts-images-indv" src={calendarImg} alt="" />
-                    <img className="personal-profile__posts-images-indv" src={moreImg} alt="" />
+                <div className="personal-profile__ctn-comments">
+                    <NewComment />
                 </div>
-            </div>
-
-            <div className="personal-profile__comments">
-                <NewComment />
             </div>
         </div>
     );

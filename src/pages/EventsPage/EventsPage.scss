@@ -5,13 +5,27 @@
     @include flex-column;
     gap: $mobile-gap-default;
 
+    @include desktop {
+        flex-direction: row;
+    }
+
     &__buttons {
         @include flex-vertical;
         gap: $mobile-gap-default;
+
+        @include desktop {
+            flex-direction: column;
+            flex: .25 1 0;
+        }
     }
 
     &__information {
         @include flex-column;
         gap: $mobile-gap-default;
+
+        @include desktop {
+            width: 100%;
+            flex: 1 1 0;
+        }
     }
 }

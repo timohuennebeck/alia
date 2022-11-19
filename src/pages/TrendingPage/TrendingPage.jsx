@@ -12,11 +12,16 @@ export default function TrendingPage() {
     return (
         <div className="trending">
             <div className="trending__channel">
-                <div className="trending__channel-content">
-                    <h4 className="trending__channel-content-header">
-                        You are exploring "Trending"!
-                    </h4>
-                    <p className="trending__channel-content-text">2 New Trending Posts...</p>
+                <div className="trending__channel-ctn">
+                    <div className="trending__channel-ctn-emblem"></div>
+                    <div className="trending__channel-ctn-content">
+                        <h4 className="trending__channel-ctn-content-header">
+                            You are exploring "Trending"!
+                        </h4>
+                        <p className="trending__channel-ctn-content-text">
+                            2 Participants In a Huddle...
+                        </p>
+                    </div>
                 </div>
                 <div className="trending__channel-images">
                     <div className="trending__channel-images-ctn">
@@ -30,6 +35,9 @@ export default function TrendingPage() {
                     </div>
                 </div>
             </div>
+            <NewComment />
+            <NewComment />
+            <NewComment />
             <NewComment />
             <NewComment />
             <NewComment />
