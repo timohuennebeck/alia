@@ -92,6 +92,35 @@
             gap: $mobile-gap-default-cmp;
             flex: 1 1 0;
 
+            &-publish {
+                display: flex;
+                gap: $mobile-gap-default-cmp;
+
+                &-ctn {
+                    @include bright-mobile-padding-background;
+                    @include flex;
+                    gap: $mobile-gap-default;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+
+                    &-img {
+                        @include svg-size;
+                        @include svg-white;
+                    }
+
+                    &-text {
+                        display: none;
+
+                        @include tablet {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
             &-images {
                 @include flex-vertical;
                 justify-content: space-between;

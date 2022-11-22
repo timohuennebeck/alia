@@ -7,13 +7,41 @@
     gap: $mobile-gap-default-cmp;
 
     &__indv {
-        @include flex-vertical;
+        display: none;
+
+        @include tablet {
+            @include flex-vertical;
+
+            &-img {
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: 0.5px solid $sec-color-1;
+            }
+        }
+    }
+
+    &__button {
+        @include bright-mobile-padding-background;
+        @include flex;
+        gap: $mobile-gap-default;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
 
         &-img {
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            border: 0.5px solid $sec-color-1;
+            @include svg-size;
+            @include svg-white;
+        }
+
+        &-text {
+            display: none;
+
+            @include tablet {
+                display: block;
+            }
         }
     }
 }

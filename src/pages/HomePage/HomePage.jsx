@@ -9,6 +9,7 @@ import usersImg from "../../assets/icons/users.svg";
 import micImg from "../../assets/icons/microphone.svg";
 import bellImg from "../../assets/icons/bell-slash.svg";
 import moreImg from "../../assets/icons/more-h.svg";
+import postImg from "../../assets/icons/chat.svg";
 
 // images
 import profileImg from "../../assets/images/melanie-perkins.jpg";
@@ -48,7 +49,13 @@ export default function HomePage() {
             <div className="home__share">
                 <img className="home__share-img" src={profileImg} alt="" />
                 <div className="home__share-ctn">
-                    <InputField placeholder="What's happening?" />
+                    <div className="home__share-ctn-publish">
+                        <InputField placeholder="What's happening?" />
+                        <div className="home__share-ctn-publish-ctn">
+                            <img className="home__share-ctn-publish-ctn-img" src={postImg} alt="" />
+                            <p className="home__share-ctn-publish-ctn-text">Publish</p>
+                        </div>
+                    </div>
                     <div className="home__share-ctn-images">
                         <div className="home__share-ctn-images-indv">
                             <img
