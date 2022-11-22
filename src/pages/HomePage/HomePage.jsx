@@ -3,7 +3,6 @@ import "./HomePage.scss";
 // icons
 import paperImg from "../../assets/icons/paperclip.svg";
 import imagesImg from "../../assets/icons/image-gallery.svg";
-import liveImg from "../../assets/icons/cast.svg";
 import clockImg from "../../assets/icons/clock.svg";
 import usersImg from "../../assets/icons/users.svg";
 import micImg from "../../assets/icons/microphone.svg";
@@ -19,7 +18,22 @@ import InputField from "../../components/InputField/InputField";
 import NewComment from "../../components/CommentElement/CommentElement";
 import AddNewComment from "../../components/AddNewComment/AddNewComment";
 
+// libraries
+import { Link } from "react-router-dom";
+
+// api calls
+import { useEffect, useState } from "react";
+import { getPosts } from "../../utils/api";
+
 export default function HomePage() {
+    const [postsData, setPostsData] = useState();
+
+    useEffect(() => {
+        getPosts().then(({ data }) => {
+            setPostsData(data);
+        });
+    }, []);
+
     return (
         <div className="home">
             <div className="home__channel">
@@ -35,15 +49,15 @@ export default function HomePage() {
                     </div>
                 </div>
                 <div className="home__channel-images">
-                    <div className="home__channel-images-ctn">
+                    <Link to="/huddle" className="home__channel-images-ctn">
                         <img className="home__channel-images-ctn-indv" src={micImg} alt="" />
-                    </div>
-                    <div className="home__channel-images-ctn">
+                    </Link>
+                    <Link className="home__channel-images-ctn">
                         <img className="home__channel-images-ctn-indv" src={bellImg} alt="" />
-                    </div>
-                    <div className="home__channel-images-ctn">
+                    </Link>
+                    <Link className="home__channel-images-ctn">
                         <img className="home__channel-images-ctn-indv" src={moreImg} alt="" />
-                    </div>
+                    </Link>
                 </div>
             </div>
             <div className="home__share">
@@ -71,15 +85,7 @@ export default function HomePage() {
                                 src={imagesImg}
                                 alt=""
                             />
-                            <p className="home__share-ctn-images-indv-text">Media</p>
-                        </div>
-                        <div className="home__share-ctn-images-indv">
-                            <img
-                                className="home__share-ctn-images-indv-icon"
-                                src={liveImg}
-                                alt=""
-                            />
-                            <p className="home__share-ctn-images-indv-text">Live</p>
+                            <p className="home__share-ctn-images-indv-text">Image</p>
                         </div>
                         <div className="home__share-ctn-images-indv">
                             <img
@@ -100,13 +106,9 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
-            <AddNewComment />
-            <NewComment />
-            <NewComment />
-            <NewComment />
-            <NewComment />
-            <NewComment />
-            <NewComment />
+            {postsData?.map((item) => {
+                return <NewComment data={item} key={item.id} />;
+            })}
         </div>
     );
 }

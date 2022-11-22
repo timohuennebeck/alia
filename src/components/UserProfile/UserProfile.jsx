@@ -7,7 +7,7 @@ import clockImg from "../../assets/icons/clock.svg";
 import mailImg from "../../assets/icons/mail.svg";
 import moreImg from "../../assets/icons/more-v.svg";
 
-export default function UserProfile() {
+export default function UserProfile({ data }) {
     return (
         <div className="user">
             <img className="user__profile" src={profileImg} alt="" />
@@ -22,11 +22,7 @@ export default function UserProfile() {
                     </div>
                     <img className="user__info-ctn-img" src={moreImg} alt="" />
                 </div>
-                <p className="user__info-paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...
-                </p>
+                <p className="user__info-paragraph">{data.description}</p>
                 <div className="user__info-share">
                     <div className="user__info-share-buttons">
                         <ButtonElement img={clockImg} name="7:33 PM" />

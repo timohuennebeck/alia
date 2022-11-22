@@ -11,12 +11,17 @@ import settingsImg from "../../assets/icons/cog.svg";
 import phoneImg from "../../assets/icons/phone.svg";
 import LiveChatPage from "../LiveChatPage/LiveChatPage";
 
+// libraries
+import { Link } from "react-router-dom";
+
 export default function HuddlePage() {
     return (
         <div className="huddle">
             <div className="huddle__left">
                 <div className="huddle__left-hide">
-                    <ButtonElement img={hideImg} name="Hide" />
+                    <Link to="/" className="huddle__left-hide-link">
+                        <ButtonElement img={hideImg} name="Hide" />
+                    </Link>
                     <h3>Introduction to Next.js...</h3>
                 </div>
 
@@ -50,13 +55,25 @@ export default function HuddlePage() {
                             />
                         </div>
                         <div className="huddle__left-interface-nav-indv">
-                            <img className="huddle__left-interface-nav-indv-img" src={micImg} alt="" />
+                            <img
+                                className="huddle__left-interface-nav-indv-img"
+                                src={micImg}
+                                alt=""
+                            />
                         </div>
                         <div className="huddle__left-interface-nav-end">
-                            <img className="huddle__left-interface-nav-end-img" src={phoneImg} alt="" />
+                            <img
+                                className="huddle__left-interface-nav-end-img"
+                                src={phoneImg}
+                                alt=""
+                            />
                         </div>
                         <div className="huddle__left-interface-nav-indv">
-                            <img className="huddle__left-interface-nav-indv-img" src={shareImg} alt="" />
+                            <img
+                                className="huddle__left-interface-nav-indv-img"
+                                src={shareImg}
+                                alt=""
+                            />
                         </div>
                         <div className="huddle__left-interface-nav-indv">
                             <img
