@@ -3,6 +3,7 @@ import "./Header.scss";
 // libraries
 import ReactModal from "react-modal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // icons
 import menuImg from "../../assets/icons/hamburger-menu.svg";
@@ -31,20 +32,26 @@ export default function MobileHeader() {
                 <img className="header__menu-svg" src={menuImg} alt="" onClick={openModal} />
             </div>
             <div className="header__nav">
-                <img className="header__nav-watch" src={watchImg} alt="" />
-                <img className="header__nav-docx" src={docxImg} alt="" />
-                <img className="header__nav-more" src={moreImg} alt="" />
+                <Link to="/comments">
+                    <img className="header__nav-watch" src={watchImg} alt="" />
+                </Link>
+                <Link to="/files">
+                    <img className="header__nav-docx" src={docxImg} alt="" />
+                </Link>
+                <Link>
+                    <img className="header__nav-more" src={moreImg} alt="" />
+                </Link>
             </div>
-            <div className="header__profile">
+            <Link to="/profile" className="header__profile">
                 <img className="header__profile-img" src={profileImg} alt="" />
                 <h5 className="header__profile-name">Melanie Perkins</h5>
-            </div>
+            </Link>
             <ReactModal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 className="header__card-modal"
             >
-                <HeaderLinks closeModal={closeModal}/>
+                <HeaderLinks closeModal={closeModal} />
             </ReactModal>
         </div>
     );

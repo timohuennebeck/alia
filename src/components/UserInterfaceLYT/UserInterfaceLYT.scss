@@ -40,6 +40,12 @@
                 @include flex-column;
                 gap: $mobile-gap-default;
                 flex: 1 1 0;
+                height: 96.75vh;
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
 
                 &-explore {
                     @include mobile-padding-background;
@@ -62,6 +68,12 @@
 
             @include desktop {
                 flex: 2.25 1 0;
+                height: 96.75vh;
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
             }
         }
 
@@ -73,6 +85,12 @@
                 @include flex-column;
                 gap: $mobile-gap-default;
                 flex: 1 1 0;
+                height: 96.75vh;
+                overflow: auto;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
             }
         }
     }

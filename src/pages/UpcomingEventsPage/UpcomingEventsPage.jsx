@@ -19,7 +19,7 @@ export default function UpcomingEventsPage() {
                 <EventsElement />
                 <EventsElement />
             </div>
-            <Link className="upcoming-events__more">Show More</Link>
+            <Link to="/events" className="upcoming-events__more">Show More</Link>
         </div>
     );
 }

@@ -47,6 +47,7 @@
         @include flex;
         @include mobile-padding-background;
         gap: $mobile-gap-default;
+        text-decoration: none;
 
         @include desktop {
             width: 100%;

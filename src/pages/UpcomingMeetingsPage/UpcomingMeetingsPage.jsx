@@ -17,7 +17,7 @@ export default function UpcomingMeetingsPage() {
             <div className="upcoming-meetings__list">
                 <MeetingsElement />
             </div>
-            <Link className="upcoming-meetings__more" to="/meetings">Show More</Link>
+            <Link to="/meetings" className="upcoming-meetings__more">Show More</Link>
         </div>
     );
 }

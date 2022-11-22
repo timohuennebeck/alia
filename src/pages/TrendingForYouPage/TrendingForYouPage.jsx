@@ -23,7 +23,7 @@ export default function TrendingForYouPage() {
                 <MeetingsElement />
                 <MeetingsElement />
             </div>
-            <Link className="trending-sidebar__more">Show More</Link>
+            <Link to="/trending" className="trending-sidebar__more">Show More</Link>
         </div>
     );
 }
