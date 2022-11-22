@@ -1,4 +1,4 @@
-import NewComment from "../../components/NewComment/NewComment";
+import CommentElement from "../../components/CommentElement/CommentElement";
 import "./FriendsProfilePage.scss";
 
 import profileImg from "../../assets/images/melanie-perkins.jpg";
@@ -67,7 +67,7 @@ export default function FriendsProfilePage() {
                     </div>
 
                     <div className="friends-profile__align-right-comments">
-                        <NewComment />
+                        <CommentElement />
                     </div>
                 </div>
             </div>

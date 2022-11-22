@@ -1,6 +1,6 @@
 import "./WatchCommentsPage.scss";
 
-import NewComment from "../../components/NewComment/NewComment";
+import CommentElement from "../../components/CommentElement/CommentElement";
 import ButtonElementDark from "../../components/ButtonElementDark/ButtonElementDark";
 import userImg from "../../assets/icons/user.svg";
 import calendarImg from "../../assets/icons/calendar-month.svg";
@@ -13,8 +13,8 @@ export default function WatchCommentsPage() {
                 <ButtonElementDark img={calendarImg} name="Date" />
             </div>
             <div className="comments__saved">
-                <NewComment />
-                <NewComment />
+                <CommentElement />
+                <CommentElement />
             </div>
         </div>
     );

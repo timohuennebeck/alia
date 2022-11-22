@@ -1,4 +1,4 @@
-import "./NewComment.scss";
+import "./CommentElement.scss";
 
 import profileImg from "../../assets/images/melanie-perkins.jpg";
 import ButtonElement from "../ButtonElement/ButtonElement";
@@ -7,7 +7,7 @@ import watchImg from "../../assets/icons/eye.svg";
 import commentsImg from "../../assets/icons/chat.svg";
 import moreImg from "../../assets/icons/more-v.svg";
 
-export default function NewComment() {
+export default function CommentElement() {
     return (
         <div className="comment">
             <img className="comment__profile" src={profileImg} alt="" />

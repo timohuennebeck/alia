@@ -1,4 +1,4 @@
-import NewComment from "../../components/NewComment/NewComment";
+import CommentElement from "../../components/CommentElement/CommentElement";
 import "./ProfilePage.scss";
 
 import profileImg from "../../assets/images/melanie-perkins.jpg";
@@ -35,7 +35,7 @@ export default function ProfilePage() {
                     </div>
                 </div>
                 <div className="personal-profile__ctn-comments">
-                    <NewComment />
+                    <CommentElement />
                 </div>
             </div>
         </div>

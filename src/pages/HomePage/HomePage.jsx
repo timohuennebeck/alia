@@ -15,7 +15,8 @@ import profileImg from "../../assets/images/melanie-perkins.jpg";
 
 // components
 import InputField from "../../components/InputField/InputField";
-import NewComment from "../../components/NewComment/NewComment";
+import NewComment from "../../components/CommentElement/CommentElement";
+import AddNewComment from "../../components/AddNewComment/AddNewComment";
 
 export default function HomePage() {
     return (
@@ -92,6 +93,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </div>
+            <AddNewComment />
             <NewComment />
             <NewComment />
             <NewComment />
