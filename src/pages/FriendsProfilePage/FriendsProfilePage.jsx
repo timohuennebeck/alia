@@ -59,7 +59,7 @@ export default function FriendsProfilePage() {
                     <ProfileImgFriends img={profileImg} />
                 </div>
                 <div className="friends-profile__align-right">
-                    <UserProfile data={usersData}/>
+                    <UserProfile usersData={usersData}/>
                     <div className="friends-profile__align-right-posts">
                         <div className="friends-profile__align-right-posts-content">
                             <h3 className="friends-profile__align-right-posts-content-header">

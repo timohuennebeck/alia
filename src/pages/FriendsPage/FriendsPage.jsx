@@ -23,7 +23,7 @@ export default function FriendsPage() {
             <h3>Friends</h3>
             <div className="friends__list">
                 {usersData.map((item) => {
-                    return <FriendsElement data={item} key={item.id} />;
+                    return <FriendsElement usersData={item} key={item.id} />;
                 })}
             </div>
         </div>

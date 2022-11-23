@@ -27,7 +27,7 @@ export default function CommentElement({ postsData }) {
     return (
         <>
             <div className="comment">
-                <Link to={`/profile/${postsData.id}`}>
+                <Link to={`/friends-profile/${postsData.id}`}>
                     <img className="comment__profile" src={profileImg} alt="" />
                 </Link>
                 <div className="comment__info">
@@ -47,14 +47,18 @@ export default function CommentElement({ postsData }) {
                     </div>
                     <div className="comment__info-content">
                         <p className="comment__info-content-paragraph">{postsData.message}</p>
-                        <p className="comment__info-content-amount">7 Comments</p>
+                        <p className="comment__info-content-amount" onClick={openModal}>
+                            7 Comments
+                        </p>
                     </div>
                     <div className="comment__info-share">
                         <div className="comment__info-share-buttons">
                             <ButtonElement img={watchImg} name="Watch" />
                             <ButtonElement img={commentsImg} name="Comment" onClick={openModal} />
                         </div>
-                        <p className="comment__info-share-amount">7 Comments</p>
+                        <p className="comment__info-share-amount" onClick={openModal}>
+                            7 Comments
+                        </p>
                     </div>
                 </div>
             </div>
@@ -64,7 +68,7 @@ export default function CommentElement({ postsData }) {
                 className="comment__card-modal"
                 overlayClassName="comment__card-modal-background"
             >
-                <ShowCommentsModal closeModal={closeModal} postsData={postsData}/>
+                <ShowCommentsModal closeModal={closeModal} postsData={postsData} />
             </ReactModal>
         </>
     );

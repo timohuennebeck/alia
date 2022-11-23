@@ -15,7 +15,7 @@ export default function ShowCommentsModal({ postsData, closeModal }) {
         getComments().then(({ data }) => {
             setCommentsData(data.filter((comments) => comments.posts_id === postsData.id));
         });
-    });
+    }, []);
 
     return (
         <div className="show-comments">

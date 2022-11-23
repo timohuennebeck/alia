@@ -8,7 +8,7 @@ import moreImg from "../../assets/icons/more-h.svg";
 import UserProfile from "../../components/UserProfile/UserProfile";
 import { useEffect, useState } from "react";
 
-import { getPosts, getUsers } from "../../utils/api";
+import { getPosts, getUsersId } from "../../utils/api";
 import { useParams } from "react-router-dom";
 
 export default function ProfilePage() {
@@ -18,13 +18,13 @@ export default function ProfilePage() {
     const { id } = useParams();
 
     useEffect(() => {
-        getUsers().then(({ data }) => {
+        getUsersId({ id }).then(({ data }) => {
             setUsersData(data[0]);
         });
         getPosts().then(({ data }) => {
             setPostsData(data.filter((item) => item.users_id === Number(id)));
         });
-    }, []);
+    }, [id]);
 
     return (
         <div className="personal-profile">
@@ -33,7 +33,7 @@ export default function ProfilePage() {
                 <ProfileImgFriends img={profileImg} />
             </div>
             <div className="personal-profile__ctn">
-                <UserProfile data={usersData} />
+                <UserProfile usersData={usersData} />
                 <div className="personal-profile__ctn-posts">
                     <div className="personal-profile__ctn-posts-content">
                         <h3 className="personal-profile__ctn-posts-content-header">Your Posts</h3>
@@ -54,7 +54,7 @@ export default function ProfilePage() {
                 </div>
                 <div className="personal-profile__ctn-comments">
                     {postsData.map((item) => {
-                        return <CommentElement postsData={item} key={item.id}/>;
+                        return <CommentElement postsData={item} key={item.id} />;
                     })}
                 </div>
             </div>
