@@ -1,73 +1,73 @@
 import axios from "axios";
 
-const base_url = "http://localhost:8080";
+const API_URL = process.env.REACT_APP_API_URL;
 
 // users
 
 export const getUsers = () => {
-    return axios.get(`${base_url}/users`);
+    return axios.get(`${API_URL}/users`);
 };
 
 export const getUsersId = ({ id }) => {
-    return axios.get(`${base_url}/users/${id}`);
+    return axios.get(`${API_URL}/users/${id}`);
 };
 
 // posts
 
 export const getPosts = () => {
-    return axios.get(`${base_url}/posts`);
+    return axios.get(`${API_URL}/posts`);
 };
 
 export const getPostsId = ({ id }) => {
-    return axios.get(`${base_url}/posts/${id}`);
+    return axios.get(`${API_URL}/posts/${id}`);
 };
 
 // hubs
 
 export const getHubs = () => {
-    return axios.get(`${base_url}/hubs`);
+    return axios.get(`${API_URL}/hubs`);
 };
 
 export const getHubsId = ({ id }) => {
-    return axios.get(`${base_url}/hubs/${id}`);
+    return axios.get(`${API_URL}/hubs/${id}`);
 };
 
 // files
 
 export const getFiles = () => {
-    return axios.get(`${base_url}/files`);
+    return axios.get(`${API_URL}/files`);
 };
 
 export const getFilesId = ({ id }) => {
-    return axios.get(`${base_url}/files/${id}`);
+    return axios.get(`${API_URL}/files/${id}`);
 };
 
 // files
 
 export const getMeetings = () => {
-    return axios.get(`${base_url}/meetings`);
+    return axios.get(`${API_URL}/meetings`);
 };
 
 export const getMeetingsId = ({ id }) => {
-    return axios.get(`${base_url}/meetings/${id}`);
+    return axios.get(`${API_URL}/meetings/${id}`);
 };
 
 // events
 
 export const getEvents = () => {
-    return axios.get(`${base_url}/events`);
+    return axios.get(`${API_URL}/events`);
 };
 
 export const getEventsId = ({ id }) => {
-    return axios.get(`${base_url}/events/${id}`);
+    return axios.get(`${API_URL}/events/${id}`);
 };
 
 // events
 
 export const getComments = () => {
-    return axios.get(`${base_url}/comments`);
+    return axios.get(`${API_URL}/comments`);
 };
 
 export const getCommentsId = ({ id }) => {
-    return axios.get(`${base_url}/comments/${id}`);
+    return axios.get(`${API_URL}/comments/${id}`);
 };
