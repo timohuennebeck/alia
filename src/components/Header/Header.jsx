@@ -2,7 +2,7 @@ import "./Header.scss";
 
 // libraries
 import ReactModal from "react-modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // icons
@@ -15,8 +15,11 @@ import moreImg from "../../assets/icons/more-h.svg";
 import profileImg from "../../assets/images/melanie-perkins.jpg";
 import HeaderLinks from "../HeaderLinks/HeaderLinks";
 
+import { getUsers } from "../../utils/api";
+
 export default function MobileHeader() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [usersData, setUsersData] = useState([]);
 
     function openModal() {
         setModalIsOpen(true);
@@ -25,6 +28,12 @@ export default function MobileHeader() {
     function closeModal() {
         setModalIsOpen(false);
     }
+
+    useEffect(() => {
+        getUsers().then(({data}) => {
+            setUsersData(data[0])
+        })
+    })
 
     return (
         <div className="header">
@@ -42,7 +51,7 @@ export default function MobileHeader() {
                     <img className="header__nav-more" src={moreImg} alt="" />
                 </Link>
             </div>
-            <Link to="/profile" className="header__profile">
+            <Link to={`/profile/${usersData.id}`} className="header__profile">
                 <img className="header__profile-img" src={profileImg} alt="" />
                 <h5 className="header__profile-name">Melanie Perkins</h5>
             </Link>

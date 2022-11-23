@@ -6,6 +6,9 @@ import favoriteImg from "../../assets/icons/heart.svg";
 import DetailsRow from "../../components/DetailsRow/DetailsRow";
 
 export default function FilesPage() {
+
+    
+
     return (
         <div className="files">
             <div className="files__buttons">

@@ -37,7 +37,7 @@ function App() {
                     </Route>
                     <Route element={<SearchInterfaceLYT />}>
                         <Route path="/comments" element={<CommentsPage />} />
-                        <Route path="/profile" element={<ProfilePage />} />
+                        <Route path="/profile/:id" element={<ProfilePage />} />
                         <Route path="/friends-profile" element={<FriendsProfilePage />} />
                         <Route path="/files" element={<FilesPage />} />
                         <Route path="/meetings" element={<MeetingsPage />} />

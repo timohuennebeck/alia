@@ -13,7 +13,9 @@ export default function CommentElement({ data }) {
     return (
         <>
             <div className="comment">
-                <img className="comment__profile" src={profileImg} alt="" />
+                <Link to={`/profile/${data.id}`}>
+                    <img className="comment__profile" src={profileImg} alt="" />
+                </Link>
                 <div className="comment__info">
                     <div className="comment__info-ctn">
                         <div className="comment__info-ctn-name">

@@ -9,17 +9,20 @@ import UserProfile from "../../components/UserProfile/UserProfile";
 import { useEffect, useState } from "react";
 
 import { getPosts, getUsers } from "../../utils/api";
+import { useParams } from "react-router-dom";
 
 export default function ProfilePage() {
     const [usersData, setUsersData] = useState([]);
     const [postsData, setPostsData] = useState([]);
+
+    const { id } = useParams();
 
     useEffect(() => {
         getUsers().then(({ data }) => {
             setUsersData(data[0]);
         });
         getPosts().then(({ data }) => {
-            setPostsData(data);
+            setPostsData(data.filter((item) => item.users_id === Number(id)));
         });
     }, []);
 
