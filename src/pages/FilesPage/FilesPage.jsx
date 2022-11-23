@@ -5,9 +5,20 @@ import recentImg from "../../assets/icons/history.svg";
 import favoriteImg from "../../assets/icons/heart.svg";
 import DetailsRow from "../../components/DetailsRow/DetailsRow";
 
-export default function FilesPage() {
+// libraries
+import { useEffect, useState } from "react";
 
-    
+// api calls
+import { getFiles } from "../../utils/api";
+
+export default function FilesPage() {
+    const [filesData, setFilesData] = useState([]);
+
+    useEffect(() => {
+        getFiles().then(({ data }) => {
+            setFilesData(data);
+        });
+    }, []);
 
     return (
         <div className="files">
@@ -16,11 +27,9 @@ export default function FilesPage() {
                 <ButtonElementDark img={favoriteImg} name="Favorites" />
             </div>
             <div className="files__information">
-                <DetailsRow />
-                <DetailsRow />
-                <DetailsRow />
-                <DetailsRow />
-                <DetailsRow />
+                {filesData.map((item) => {
+                    return <DetailsRow data={item} key={item.id}/>;
+                })}
             </div>
         </div>
     );

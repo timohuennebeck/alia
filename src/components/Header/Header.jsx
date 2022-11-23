@@ -33,7 +33,7 @@ export default function MobileHeader() {
         getUsers().then(({data}) => {
             setUsersData(data[0])
         })
-    })
+    }, [])
 
     return (
         <div className="header">

@@ -54,7 +54,7 @@ export default function ProfilePage() {
                 </div>
                 <div className="personal-profile__ctn-comments">
                     {postsData.map((item) => {
-                        return <CommentElement postsData={item} />;
+                        return <CommentElement postsData={item} key={item.id}/>;
                     })}
                 </div>
             </div>

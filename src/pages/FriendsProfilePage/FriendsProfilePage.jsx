@@ -90,7 +90,7 @@ export default function FriendsProfilePage() {
 
                     <div className="friends-profile__align-right-comments">
                         {postsData.map((item) => {
-                            return <CommentElement postsData={item} />;
+                            return <CommentElement postsData={item} key={item.id}/>;
                         })}
                     </div>
                 </div>

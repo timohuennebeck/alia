@@ -35,7 +35,7 @@ export default function UserInterfaceLYT() {
                     <Header />
                     <UpcomingMeetingsPage />
                     <UpcomingEventsPage />
-                    <TrendingForYouPage />
+                    {/* <TrendingForYouPage /> */}
                 </div>
             </div>
         </div>

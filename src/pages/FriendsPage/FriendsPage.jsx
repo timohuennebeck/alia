@@ -1,12 +1,13 @@
-import FriendsElement from "../../components/FriendsElement/FriendsElement";
 import "./FriendsPage.scss";
 
+// components
+import FriendsElement from "../../components/FriendsElement/FriendsElement";
+
 // libraries
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 // api calls
 import { getUsers } from "../../utils/api";
-import { useEffect, useState } from "react";
 
 export default function FriendsPage() {
     const [usersData, setUsersData] = useState([]);
@@ -22,7 +23,7 @@ export default function FriendsPage() {
             <h3>Friends</h3>
             <div className="friends__list">
                 {usersData.map((item) => {
-                    return <FriendsElement data={item} />;
+                    return <FriendsElement data={item} key={item.id} />;
                 })}
             </div>
         </div>

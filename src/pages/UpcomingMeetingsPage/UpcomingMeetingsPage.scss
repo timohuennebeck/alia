@@ -28,6 +28,8 @@
     &__list {
         @include flex-column;
         gap: $mobile-gap-default;
+        max-height: 8.5rem;
+        overflow: scroll;
     }
 
     &__more {

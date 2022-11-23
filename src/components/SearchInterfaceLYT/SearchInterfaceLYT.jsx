@@ -33,7 +33,10 @@ export default function SearchInterfaceLYT() {
                 <div className="search__desktop-main">
                     <div className="search__desktop-main-explore">
                         <img className="search__desktop-main-explore-img" src={searchImg} alt="" />
-                        <input className="search__desktop-main-explore-input" placeholder="Search..." />
+                        <input
+                            className="search__desktop-main-explore-input"
+                            placeholder="Search..."
+                        />
                     </div>
                     <Outlet />
                 </div>
@@ -41,7 +44,7 @@ export default function SearchInterfaceLYT() {
                     <Header />
                     <UpcomingMeetingsPage />
                     <UpcomingEventsPage />
-                    <TrendingForYouPage />
+                    {/* <TrendingForYouPage /> */}
                 </div>
             </div>
         </div>

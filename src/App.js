@@ -34,8 +34,6 @@ function App() {
                         <Route path="/friends" element={<FriendsPage />} />
                         <Route path="/trending" element={<TrendingPage />} />
                         <Route path="/favorite-hubs" element={<FavoriteHubsPage />} />
-                        <Route path="/upcoming-meetings" element={<UpcomingMeetingsPage />} />
-                        <Route path="/upcoming-events" element={<UpcomingEventsPage />} />
                     </Route>
                     <Route element={<SearchInterfaceLYT />}>
                         <Route path="/comments" element={<CommentsPage />} />

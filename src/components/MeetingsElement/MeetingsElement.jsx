@@ -1,10 +1,10 @@
 import "./MeetingsElement.scss";
 
-export default function MeetingsElement() {
-  return (
-    <div className="meetings-element">
-        <p className="meetings-element__hashtag">#marketing</p>
-        <p className="meetings-element__amount">25 Participants</p>
-    </div>
-  )
+export default function MeetingsElement({ data }) {
+    return (
+        <div className="meetings-element">
+            <p className="meetings-element__hashtag">{data.name}</p>
+            <p className="meetings-element__amount">{data.time_at}</p>
+        </div>
+    );
 }
