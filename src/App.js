@@ -2,8 +2,6 @@ import "./App.scss";
 
 // components
 import HomePage from "./pages/HomePage/HomePage";
-import UpcomingEventsPage from "./pages/UpcomingEventsPage/UpcomingEventsPage";
-import UpcomingMeetingsPage from "./pages/UpcomingMeetingsPage/UpcomingMeetingsPage";
 import FavoriteHubsPage from "./pages/FavoriteHubsPage/FavoriteHubsPage";
 import FriendsPage from "./pages/FriendsPage/FriendsPage";
 import MeetingsPage from "./pages/MeetingsPage/MeetingsPage.jsx";
