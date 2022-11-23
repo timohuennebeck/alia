@@ -30,7 +30,7 @@ export default function HomePage() {
 
     useEffect(() => {
         getPosts().then(({ data }) => {
-            setPostsData(data.filter((posts) => posts.id === 1));
+            setPostsData(data.filter((posts) => posts.id === "News")[0]);
         });
     }, []);
 

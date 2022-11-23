@@ -2,14 +2,18 @@ import "./FavoriteHubsPage.scss";
 
 // components
 import HubsElement from "../../components/HubsElement/HubsElement";
+import HubsPage from "../HubsPage/HubsPage";
+
+// libraries
+import ReactModal from "react-modal";
+import { useEffect, useState } from "react";
 
 // api calls
 import { getHubs } from "../../utils/api";
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function FavoriteHubsPage() {
     const [hubsData, setHubsData] = useState([]);
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     useEffect(() => {
         getHubs().then(({ data }) => {
@@ -17,15 +21,35 @@ export default function FavoriteHubsPage() {
         });
     }, []);
 
+    const openModal = () => {
+        setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+    };
+
     return (
-        <div className="favorite-hubs">
-            <h3>Favorite Hubs</h3>
-            <div className="favorite-hubs__list">
-                {hubsData.map((item) => {
-                    return <HubsElement hubsData={item} key={item.id} />;
-                })}
+        <>
+            <div className="favorite-hubs">
+                <h3>Favorite Hubs</h3>
+                <div className="favorite-hubs__list">
+                    {hubsData.map((item) => {
+                        return <HubsElement hubsData={item} key={item.id} />;
+                    })}
+                </div>
+                <p className="favorite-hubs__more" onClick={openModal}>
+                    Explore Hubs
+                </p>
             </div>
-            <Link to="/hubs" className="favorite-hubs__more">Explore Hubs</Link>
-        </div>
+            <ReactModal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                className="favorite-hubs__card-modal"
+                overlayClassName="favorite-hubs__card-modal-background"
+            >
+                <HubsPage closeModal={closeModal} />
+            </ReactModal>
+        </>
     );
 }

@@ -17,6 +17,15 @@
             flex-direction: column;
             flex: .25 1 0;
         }
+
+        &-hide {
+            display: none;
+
+            @include desktop {
+                width: 100%;
+                display: block;
+            }
+        }
     }
 
     &__information {

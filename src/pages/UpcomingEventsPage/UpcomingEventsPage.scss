@@ -30,6 +30,10 @@
         gap: $mobile-gap-default;
         max-height: 8.5rem;
         overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     &__more {
@@ -37,5 +41,48 @@
         text-decoration: none;
         font-weight: 700;
         color: $sec-color-3;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__card-modal {
+        @include dark-mobile-padding-background;
+        max-height: 100vh;
+        min-height: 100vh;
+        outline: none;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include tablet {
+            max-width: 52.5rem;
+            margin: auto;
+        }
+
+        @include desktop {
+            border: 1px solid rgb(255, 255, 255, 0.25);
+            position: absolute;
+            left: 23.75%;
+            right: 23.75%;
+            top: 5%;
+            bottom: 5%;
+            max-width: 57.5rem;
+            margin: auto;
+            min-height: 0;
+            max-height: 100vh;
+        }
+
+        &-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            backdrop-filter: blur(0.5rem);
+        }
     }
 }

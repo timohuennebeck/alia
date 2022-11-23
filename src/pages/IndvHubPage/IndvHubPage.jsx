@@ -16,9 +16,11 @@ import profileImg from "../../assets/images/melanie-perkins.jpg";
 // components
 import InputField from "../../components/InputField/InputField";
 import CommentElement from "../../components/CommentElement/CommentElement";
+import ShowCommentsModal from "../../components/ShowCommentsModal/ShowCommentsModal";
 
 // libraries
 import { Link, useParams } from "react-router-dom";
+import ReactModal from "react-modal";
 
 // api calls
 import { useEffect, useState } from "react";

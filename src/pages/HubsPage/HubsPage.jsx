@@ -1,8 +1,12 @@
 import ButtonElementDark from "../../components/ButtonElementDark/ButtonElementDark";
 import "./HubsPage.scss";
 
+// images
 import recentImg from "../../assets/icons/history.svg";
 import favoriteImg from "../../assets/icons/heart.svg";
+import hideImg from "../../assets/icons/eye-slash.svg";
+
+// components
 import DetailsRow from "../../components/DetailsRow/DetailsRow";
 
 // libraries
@@ -11,7 +15,7 @@ import DetailsRow from "../../components/DetailsRow/DetailsRow";
 import { getHubs } from "../../utils/api";
 import { useEffect, useState } from "react";
 
-export default function HubsPage() {
+export default function HubsPage({closeModal}) {
     const [hubsData, setHubsData] = useState([]);
 
     useEffect(() => {
@@ -23,6 +27,9 @@ export default function HubsPage() {
     return (
         <div className="hubs">
             <div className="hubs__buttons">
+            <div className="hubs__buttons-hide">
+                    <ButtonElementDark name="Hide" img={hideImg} onClick={closeModal} />
+                </div>
                 <ButtonElementDark img={recentImg} name="Recent" />
                 <ButtonElementDark img={favoriteImg} name="Favorites" />
             </div>

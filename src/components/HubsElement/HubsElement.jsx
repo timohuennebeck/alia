@@ -7,9 +7,6 @@ import moreImg from "../../assets/icons/more-v.svg";
 import { Link } from "react-router-dom";
 
 export default function HubsElement({ hubsData }) {
-
-
-
     return (
         <div className="hubs-element">
             <Link to={`/${hubsData.id}`} className="hubs-element__ctn">

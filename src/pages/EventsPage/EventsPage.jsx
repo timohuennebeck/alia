@@ -1,15 +1,19 @@
 import ButtonElementDark from "../../components/ButtonElementDark/ButtonElementDark";
 import "./EventsPage.scss";
 
+// images
 import userImg from "../../assets/icons/user.svg";
 import calendarImg from "../../assets/icons/calendar-month.svg";
+import hideImg from "../../assets/icons/eye-slash.svg";
+
+// components
 import DetailsRow from "../../components/DetailsRow/DetailsRow";
 
 // api calls
 import { getEvents } from "../../utils/api";
 import { useEffect, useState } from "react";
 
-export default function EventsPage() {
+export default function EventsPage({ closeModal }) {
     const [eventsData, setEventsData] = useState([]);
 
     useEffect(() => {
@@ -21,12 +25,15 @@ export default function EventsPage() {
     return (
         <div className="events">
             <div className="events__buttons">
+                <div className="events__buttons-hide">
+                    <ButtonElementDark name="Hide" img={hideImg} onClick={closeModal} />
+                </div>
                 <ButtonElementDark img={userImg} name="Person" />
                 <ButtonElementDark img={calendarImg} name="Date" />
             </div>
             <div className="events__information">
                 {eventsData.map((item) => {
-                    return <DetailsRow data={item} key={item.id}/>;
+                    return <DetailsRow data={item} key={item.id} />;
                 })}
             </div>
         </div>
