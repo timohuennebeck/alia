@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.show-comments {
+    @include flex-column;
+    gap: $mobile-gap-default;
+
+    &__buttons {
+        width: 7.5rem;
+    }
+
+    &__main {
+        @include flex-column;
+        gap: 5.25rem;
+
+        &-indv {
+            @include flex-column;
+            gap: $mobile-gap-default;
+        }
+    }
+}

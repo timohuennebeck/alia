@@ -15,14 +15,14 @@ import profileImg from "../../assets/images/melanie-perkins.jpg";
 
 // components
 import InputField from "../../components/InputField/InputField";
-import NewComment from "../../components/CommentElement/CommentElement";
+import CommentElement from "../../components/CommentElement/CommentElement";
 
 // libraries
 import { Link, useParams } from "react-router-dom";
 
 // api calls
 import { useEffect, useState } from "react";
-import { getHubs, getPosts } from "../../utils/api";
+import { getHubsId, getPosts } from "../../utils/api";
 
 export default function IndvHubPage() {
     const [postsData, setPostsData] = useState();
@@ -34,8 +34,8 @@ export default function IndvHubPage() {
         getPosts().then(({ data }) => {
             setPostsData(data.filter((posts) => posts.hubs_id === Number(id)));
         });
-        getHubs().then(({ data }) => {
-            setHubsData(data.filter((hubs) => hubs.id === Number(id))[0]);
+        getHubsId({ id }).then(({ data }) => {
+            setHubsData(data[0]);
         });
     }, [id]);
 
@@ -120,7 +120,7 @@ export default function IndvHubPage() {
                 </div>
             </div>
             {postsData?.map((item) => {
-                return <NewComment postsData={item} key={item.id} />;
+                return <CommentElement postsData={item} key={item.id} />;
             })}
         </div>
     );

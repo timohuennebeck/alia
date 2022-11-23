@@ -8,11 +8,11 @@ import { useEffect, useState } from "react";
 import { getPosts } from "../../utils/api";
 
 export default function WatchCommentsPage() {
-    const [usersData, setUsersData] = useState([]);
+    const [postsData, setPostsData] = useState([]);
 
     useEffect(() => {
         getPosts().then(({ data }) => {
-            setUsersData(data.filter((favorite) => favorite.status === "Favorite"));
+            setPostsData(data.filter((favorite) => favorite.status === "Favorite"));
         });
     }, []);
 
@@ -23,7 +23,7 @@ export default function WatchCommentsPage() {
                 <ButtonElementDark img={calendarImg} name="Date" />
             </div>
             <div className="comments__saved">
-                {usersData.map((item) => {
+                {postsData.map((item) => {
                     return <CommentElement postsData={item} key={item.id} />;
                 })}
             </div>

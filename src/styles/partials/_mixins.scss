@@ -44,6 +44,12 @@
     height: 1.5rem;
 }
 
+@mixin dark-mobile-padding-background {
+    background-color: $prim-color-1;
+    padding: 1.25rem;
+    border-radius: 1.15rem;
+}
+
 @mixin mobile-padding-background {
     background-color: $prim-color-2;
     padding: $mobile-padding-default;

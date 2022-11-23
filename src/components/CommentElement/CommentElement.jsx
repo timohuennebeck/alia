@@ -6,10 +6,23 @@ import ButtonElement from "../ButtonElement/ButtonElement";
 import watchImg from "../../assets/icons/eye.svg";
 import commentsImg from "../../assets/icons/chat.svg";
 import moreImg from "../../assets/icons/more-v.svg";
+import ShowCommentsModal from "../ShowCommentsModal/ShowCommentsModal";
 
+// libraries
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import ReactModal from "react-modal";
 
 export default function CommentElement({ postsData }) {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = () => {
+        setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+    };
 
     return (
         <>
@@ -39,14 +52,20 @@ export default function CommentElement({ postsData }) {
                     <div className="comment__info-share">
                         <div className="comment__info-share-buttons">
                             <ButtonElement img={watchImg} name="Watch" />
-                            <Link to={`comments/${postsData.id}`}>
-                                <ButtonElement img={commentsImg} name="Comment" />
-                            </Link>
+                            <ButtonElement img={commentsImg} name="Comment" onClick={openModal} />
                         </div>
                         <p className="comment__info-share-amount">7 Comments</p>
                     </div>
                 </div>
             </div>
+            <ReactModal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                className="comment__card-modal"
+                overlayClassName="comment__card-modal-background"
+            >
+                <ShowCommentsModal closeModal={closeModal} postsData={postsData}/>
+            </ReactModal>
         </>
     );
 }

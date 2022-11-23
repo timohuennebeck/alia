@@ -2,17 +2,15 @@ import axios from "axios";
 
 const base_url = "http://localhost:8080";
 
-
- // users
+// users
 
 export const getUsers = () => {
     return axios.get(`${base_url}/users`);
 };
 
-export const getUsersId = ({id}) => {
+export const getUsersId = ({ id }) => {
     return axios.get(`${base_url}/users/${id}`);
 };
-
 
 // posts
 
@@ -24,7 +22,6 @@ export const getPostsId = ({ id }) => {
     return axios.get(`${base_url}/posts/${id}`);
 };
 
-
 // hubs
 
 export const getHubs = () => {
@@ -34,7 +31,6 @@ export const getHubs = () => {
 export const getHubsId = ({ id }) => {
     return axios.get(`${base_url}/hubs/${id}`);
 };
-
 
 // files
 
@@ -46,7 +42,6 @@ export const getFilesId = ({ id }) => {
     return axios.get(`${base_url}/files/${id}`);
 };
 
-
 // files
 
 export const getMeetings = () => {
@@ -57,7 +52,6 @@ export const getMeetingsId = ({ id }) => {
     return axios.get(`${base_url}/meetings/${id}`);
 };
 
-
 // events
 
 export const getEvents = () => {
@@ -66,4 +60,14 @@ export const getEvents = () => {
 
 export const getEventsId = ({ id }) => {
     return axios.get(`${base_url}/events/${id}`);
+};
+
+// events
+
+export const getComments = () => {
+    return axios.get(`${base_url}/comments`);
+};
+
+export const getCommentsId = ({ id }) => {
+    return axios.get(`${base_url}/comments/${id}`);
 };
