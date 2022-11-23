@@ -9,11 +9,12 @@ import moreImg from "../../assets/icons/more-v.svg";
 
 import { Link } from "react-router-dom";
 
-export default function CommentElement({ data }) {
+export default function CommentElement({ postsData }) {
+
     return (
         <>
             <div className="comment">
-                <Link to={`/profile/${data.id}`}>
+                <Link to={`/profile/${postsData.id}`}>
                     <img className="comment__profile" src={profileImg} alt="" />
                 </Link>
                 <div className="comment__info">
@@ -32,13 +33,13 @@ export default function CommentElement({ data }) {
                         <img className="comment__info-ctn-img" src={moreImg} alt="" />
                     </div>
                     <div className="comment__info-content">
-                        <p className="comment__info-content-paragraph">{data.message}</p>
+                        <p className="comment__info-content-paragraph">{postsData.message}</p>
                         <p className="comment__info-content-amount">7 Comments</p>
                     </div>
                     <div className="comment__info-share">
                         <div className="comment__info-share-buttons">
                             <ButtonElement img={watchImg} name="Watch" />
-                            <Link to={`comments/${data.id}`}>
+                            <Link to={`comments/${postsData.id}`}>
                                 <ButtonElement img={commentsImg} name="Comment" />
                             </Link>
                         </div>

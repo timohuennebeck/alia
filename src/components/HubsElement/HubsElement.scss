@@ -8,6 +8,7 @@
     &__ctn {
         @include flex-vertical;
         gap: $mobile-gap-default;
+        text-decoration: none;
 
         &-img {
             width: 3.5rem;

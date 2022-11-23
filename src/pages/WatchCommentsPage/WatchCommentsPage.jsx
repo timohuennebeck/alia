@@ -24,7 +24,7 @@ export default function WatchCommentsPage() {
             </div>
             <div className="comments__saved">
                 {usersData.map((item) => {
-                    return <CommentElement data={item} key={item.id} />;
+                    return <CommentElement postsData={item} key={item.id} />;
                 })}
             </div>
         </div>

@@ -5,6 +5,7 @@
     @include mobile-padding-background-cmp;
     @include flex-column;
     gap: $mobile-gap-default;
+    text-decoration: none;
 
     &__list {
         @include flex-column;

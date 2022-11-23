@@ -11,7 +11,29 @@ import ButtonElementDark from "../../components/ButtonElementDark/ButtonElementD
 import userImg from "../../assets/icons/user-plus.svg";
 import messageImg from "../../assets/icons/chat.svg";
 
+// libraries
+
+// api calls
+import { getUsers } from "../../utils/api";
+import { getPosts } from "../../utils/api";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 export default function FriendsProfilePage() {
+    const [usersData, setUsersData] = useState([]);
+    const [postsData, setPostsData] = useState([]);
+
+    const { id } = useParams();
+
+    useEffect(() => {
+        getUsers().then(({ data }) => {
+            setUsersData(data.filter((friend) => friend.id === Number(id))[0]);
+        });
+        getPosts().then(({ data }) => {
+            setPostsData(data.filter((post) => post.users_id === Number(id)));
+        });
+    }, [id]);
+
     return (
         <div className="friends-profile">
             <div className="friends-profile__nav">
@@ -37,11 +59,11 @@ export default function FriendsProfilePage() {
                     <ProfileImgFriends img={profileImg} />
                 </div>
                 <div className="friends-profile__align-right">
-                    <UserProfile />
+                    <UserProfile data={usersData}/>
                     <div className="friends-profile__align-right-posts">
                         <div className="friends-profile__align-right-posts-content">
                             <h3 className="friends-profile__align-right-posts-content-header">
-                                Melanie's Posts
+                                {usersData.first_name}'s Posts
                             </h3>
                             <p className="friends-profile__align-right-posts-content-amount">
                                 25 Posts
@@ -67,7 +89,9 @@ export default function FriendsProfilePage() {
                     </div>
 
                     <div className="friends-profile__align-right-comments">
-                        <CommentElement />
+                        {postsData.map((item) => {
+                            return <CommentElement postsData={item} />;
+                        })}
                     </div>
                 </div>
             </div>

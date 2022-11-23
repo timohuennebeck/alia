@@ -5,10 +5,10 @@
     @include bright-mobile-padding-background;
     @include flex-vertical;
     justify-content: space-between;
+    text-decoration: none;
 
     &:hover {
-        cursor: pointer;
-        transform: scale(1.025)
+        transform: scale(1.025);
     }
 
     &__user {
@@ -26,6 +26,7 @@
             height: 2.5rem;
             border-radius: 50%;
             border: 0.5px solid $sec-color-1;
+            object-fit: cover;
         }
     }
 

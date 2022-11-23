@@ -30,7 +30,7 @@ export default function HomePage() {
 
     useEffect(() => {
         getPosts().then(({ data }) => {
-            setPostsData(data);
+            setPostsData(data.filter((posts) => posts.id === 1));
         });
     }, []);
 
@@ -107,7 +107,7 @@ export default function HomePage() {
                 </div>
             </div>
             {postsData?.map((item) => {
-                return <NewComment data={item} key={item.id} />;
+                return <NewComment postsData={item} key={item.id} />;
             })}
         </div>
     );

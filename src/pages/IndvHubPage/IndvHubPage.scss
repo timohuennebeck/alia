@@ -1,0 +1,161 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.indv-hub {
+    @include flex-column;
+    gap: $mobile-gap-default;
+
+    &__channel {
+        @include mobile-padding-background-cmp;
+        @include flex-column;
+        gap: $mobile-gap-default-cmp;
+        text-align: center;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &-ctn {
+            @include tablet {
+                @include flex-vertical;
+                gap: $mobile-gap-default-cmp;
+            }
+
+            &-emblem {
+                @include tablet {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 1.15rem;
+                    background-color: $prim-color-3;
+                }
+            }
+
+            &-content {
+                @include flex-column;
+                gap: 0.25rem;
+
+                &-text {
+                    color: $sec-color-2;
+
+                    @include tablet {
+                        display: flex;
+                    }
+                }
+            }
+        }
+
+        &-images {
+            @include flex-vertical;
+            justify-content: space-around;
+
+            @include tablet {
+                @include bright-mobile-padding-background;
+                gap: $mobile-gap-default;
+            }
+
+            &-ctn {
+                &-indv {
+                    @include svg-size;
+                    @include svg-white;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+
+    &__share {
+        @include mobile-padding-background-cmp;
+        display: flex;
+        gap: $mobile-gap-default-cmp;
+        flex: 1 1 0;
+
+        &-img {
+            display: none;
+
+            @include tablet {
+                display: block;
+                width: 2.5rem;
+                height: 2.5rem;
+                border-radius: 50%;
+                border: 0.5px solid $sec-color-1;
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        &-ctn {
+            @include flex-column;
+            gap: $mobile-gap-default-cmp;
+            flex: 1 1 0;
+
+            &-publish {
+                display: flex;
+                gap: $mobile-gap-default-cmp;
+
+                &-ctn {
+                    @include bright-mobile-padding-background;
+                    @include flex;
+                    gap: $mobile-gap-default;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+
+                    &-img {
+                        @include svg-size;
+                        @include svg-white;
+                    }
+
+                    &-text {
+                        display: none;
+
+                        @include tablet {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            &-images {
+                @include flex-vertical;
+                gap: $mobile-gap-default;
+
+                &-indv {
+                    @include bright-mobile-padding-background;
+                    @include flex;
+
+                    @include tablet {
+                        gap: $mobile-gap-default;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+                    }
+
+                    &-icon {
+                        @include svg-size;
+                        @include svg-white;
+                    }
+
+                    &-text {
+                        display: none;
+
+                        @include tablet {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

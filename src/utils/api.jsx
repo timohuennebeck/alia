@@ -13,3 +13,11 @@ export const getPosts = () => {
 export const getPostsId = ({ id }) => {
     return axios.get(`${base_url}/posts/${id}`);
 };
+
+export const getHubs = () => {
+    return axios.get(`${base_url}/hubs`);
+};
+
+export const getHubsId = ({ id }) => {
+    return axios.get(`${base_url}/hubs/${id}`);
+};

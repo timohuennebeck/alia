@@ -49,11 +49,13 @@
         &-right {
             @include flex-column;
             gap: $mobile-gap-default;
+            width: 100%;
 
             &-posts {
                 @include mobile-padding-background-cmp;
                 @include flex-vertical;
                 justify-content: space-between;
+                width: 100%;
 
                 &-content {
                     @include flex-column;
@@ -79,6 +81,11 @@
                         }
                     }
                 }
+            }
+
+            &-comments {
+                @include flex-column;
+                gap: $mobile-gap-default;
             }
         }
     }

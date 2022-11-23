@@ -20,6 +20,7 @@ import FriendsProfilePage from "./pages/FriendsProfilePage/FriendsProfilePage";
 import FilesPage from "./pages/FilesPage/FilesPage";
 import HubsPage from "./pages/HubsPage/HubsPage";
 import HuddlePage from "./pages/HuddlePage/HuddlePage";
+import IndvHubPage from "./pages/IndvHubPage/IndvHubPage";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                     <Route path="/huddle" element={<HuddlePage />} />
                     <Route element={<UserInterfaceLYT />}>
                         <Route path="/" element={<HomePage />} />
+                        <Route path="/:id" element={<IndvHubPage />} />
                         <Route path="/friends" element={<FriendsPage />} />
                         <Route path="/trending" element={<TrendingPage />} />
                         <Route path="/favorite-hubs" element={<FavoriteHubsPage />} />
@@ -38,7 +40,7 @@ function App() {
                     <Route element={<SearchInterfaceLYT />}>
                         <Route path="/comments" element={<CommentsPage />} />
                         <Route path="/profile/:id" element={<ProfilePage />} />
-                        <Route path="/friends-profile" element={<FriendsProfilePage />} />
+                        <Route path="/friends-profile/:id" element={<FriendsProfilePage />} />
                         <Route path="/files" element={<FilesPage />} />
                         <Route path="/meetings" element={<MeetingsPage />} />
                         <Route path="/events" element={<EventsPage />} />
