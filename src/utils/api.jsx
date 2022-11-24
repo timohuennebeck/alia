@@ -12,6 +12,12 @@ export const getUsersId = ({ id }) => {
     return axios.get(`${API_URL}/users/${id}`);
 };
 
+// friends
+
+export const getFriends = () => {
+    return axios.get(`${API_URL}/friends`);
+};
+
 // posts
 
 export const getPosts = () => {

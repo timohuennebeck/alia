@@ -18,6 +18,10 @@ export default function FriendsPage() {
         });
     }, []);
 
+    if (!usersData) {
+        return <p>Loading...</p>;
+    }
+
     return (
         <div className="friends">
             <h3>Friends</h3>
