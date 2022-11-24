@@ -6,7 +6,6 @@ import FriendsPage from "../../pages/FriendsPage/FriendsPage";
 import FavoriteHubsPage from "../../pages/FavoriteHubsPage/FavoriteHubsPage";
 import UpcomingMeetingsPage from "../../pages/UpcomingMeetingsPage/UpcomingMeetingsPage";
 import UpcomingEventsPage from "../../pages/UpcomingEventsPage/UpcomingEventsPage";
-import TrendingForYouPage from "../../pages/TrendingForYouPage/TrendingForYouPage";
 
 export default function UserInterfaceLYT() {
     return (
