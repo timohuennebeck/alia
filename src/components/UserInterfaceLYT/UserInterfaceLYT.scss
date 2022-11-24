@@ -68,8 +68,6 @@
 
             @include desktop {
                 flex: 2.25 1 0;
-                height: 96.75vh;
-                overflow: auto;
 
                 &::-webkit-scrollbar {
                     display: none;
