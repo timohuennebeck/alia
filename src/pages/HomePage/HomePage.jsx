@@ -16,7 +16,6 @@ import profileImg from "../../assets/images/portrait.jpg";
 // components
 import InputField from "../../components/InputField/InputField";
 import PostElement from "../../components/PostElement/PostElement";
-import AddNewComment from "../../components/AddNewComment/AddNewComment";
 
 // libraries
 import { Link } from "react-router-dom";
@@ -30,7 +29,7 @@ export default function HomePage() {
 
     useEffect(() => {
         getPosts().then(({ data }) => {
-            setPostsData(data.filter((posts) => posts.id === "News")[0]);
+            setPostsData(data.filter((posts) => posts.hubs_id === 1));
         });
     }, []);
 
