@@ -89,6 +89,16 @@
             }
         }
 
+        &-date {
+            display: flex;
+            gap: 1rem;
+
+            &-time,
+            &-date {
+                color: $sec-color-2;
+            }
+        }
+
         &-share {
             @include flex-vertical;
             gap: $mobile-gap-default;

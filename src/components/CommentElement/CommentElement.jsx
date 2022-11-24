@@ -51,6 +51,17 @@ export default function CommentElement({ postsData }) {
                             7 Comments
                         </p>
                     </div>
+                    <div className="comment__info-date">
+                        <p className="comment__info-date-time">
+                            {new Date(postsData.created_at).toLocaleTimeString("en-US", {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                            })}
+                        </p>
+                        <p className="comment__info-date-date">
+                            {new Date(postsData.created_at).toLocaleDateString()}
+                        </p>
+                    </div>
                     <div className="comment__info-share">
                         <div className="comment__info-share-buttons">
                             <ButtonElement img={watchImg} name="Watch" />
