@@ -11,24 +11,22 @@ import moreImg from "../../assets/icons/more-h.svg";
 import postImg from "../../assets/icons/chat.svg";
 
 // images
-import profileImg from "../../assets/images/melanie-perkins.jpg";
+import profileImg from "../../assets/images/portrait.jpg";
 
 // components
 import InputField from "../../components/InputField/InputField";
-import CommentElement from "../../components/CommentElement/CommentElement";
-import ShowCommentsModal from "../../components/ShowCommentsModal/ShowCommentsModal";
+import PostElement from "../../components/PostElement/PostElement";
 
 // libraries
 import { Link, useParams } from "react-router-dom";
-import ReactModal from "react-modal";
 
 // api calls
 import { useEffect, useState } from "react";
 import { getHubsId, getPosts } from "../../utils/api";
 
 export default function IndvHubPage() {
-    const [postsData, setPostsData] = useState();
-    const [hubsData, setHubsData] = useState();
+    const [postsData, setPostsData] = useState([]);
+    const [hubsData, setHubsData] = useState([]);
 
     const { id } = useParams();
 
@@ -122,7 +120,7 @@ export default function IndvHubPage() {
                 </div>
             </div>
             {postsData?.map((item) => {
-                return <CommentElement postsData={item} key={item.id} />;
+                return <PostElement postsData={item} key={item.id} />;
             })}
         </div>
     );

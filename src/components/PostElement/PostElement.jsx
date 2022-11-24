@@ -1,4 +1,4 @@
-import "./CommentElement.scss";
+import "./PostElement.scss";
 
 import ButtonElement from "../ButtonElement/ButtonElement";
 
@@ -6,7 +6,6 @@ import watchImg from "../../assets/icons/eye.svg";
 import commentsImg from "../../assets/icons/chat.svg";
 import moreImg from "../../assets/icons/more-v.svg";
 import ShowCommentsModal from "../ShowCommentsModal/ShowCommentsModal";
-import profileImg from "../../assets/images/portrait.jpg";
 
 // libraries
 import { Link } from "react-router-dom";
@@ -16,17 +15,17 @@ import ReactModal from "react-modal";
 // api calls
 import { getComments, getUsers } from "../../utils/api";
 
-export default function CommentElement({ commentsData }) {
+export default function PostElement({ postsData }) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [usersData, setUsersData] = useState([]);
     const [commentsAmount, setCommentsAmount] = useState([]);
 
     useEffect(() => {
         getUsers().then(({ data }) => {
-            setUsersData(data.filter((user) => user.id === commentsData.users_id)[0]);
+            setUsersData(data.filter((user) => user.id === postsData.users_id)[0]);
         });
         getComments().then(({ data }) => {
-            setCommentsAmount(data.filter((comment) => comment.posts_id === commentsData.id));
+            setCommentsAmount(data.filter((comment) => comment.posts_id === postsData.id));
         });
     }, []);
 
@@ -38,58 +37,62 @@ export default function CommentElement({ commentsData }) {
         setModalIsOpen(false);
     };
 
-    if (!usersData) {
+    if (!usersData || !commentsAmount) {
         return <p>Loading Database...</p>;
+    }
+
+    if (commentsAmount === 0) {
+        console.log("Hello");
     }
 
     return (
         <>
-            <div className="comment">
-                <Link to={`/friends-profile/${commentsData.users_id}`}>
-                    <img className="comment__profile" src={usersData.image_url} alt="" />
+            <div className="post">
+                <Link to={`/friends-profile/${postsData.users_id}`}>
+                    <img className="post__profile" src={usersData.image_url} alt="" />
                 </Link>
-                <div className="comment__info">
-                    <div className="comment__info-ctn">
-                        <div className="comment__info-ctn-name">
+                <div className="post__info">
+                    <div className="post__info-ctn">
+                        <div className="post__info-ctn-name">
                             <img
-                                className="comment__info-ctn-name-img"
+                                className="post__info-ctn-name-img"
                                 src={usersData.image_url}
                                 alt=""
                             />
-                            <div className="comment__info-ctn-name-indv">
-                                <h5 className="comment__info-ctn-name-indv-header">
+                            <div className="post__info-ctn-name-indv">
+                                <h5 className="post__info-ctn-name-indv-header">
                                     {usersData.first_name} {usersData.last_name}
                                 </h5>
-                                <p className="comment__info-ctn-name-indv-username">
+                                <p className="post__info-ctn-name-indv-username">
                                     {usersData.username}
                                 </p>
                             </div>
                         </div>
-                        <img className="comment__info-ctn-img" src={moreImg} alt="" />
+                        <img className="post__info-ctn-img" src={moreImg} alt="" />
                     </div>
-                    <div className="comment__info-content">
-                        <p className="comment__info-content-paragraph">{commentsData.message}</p>
-                        <p className="comment__info-content-amount" onClick={openModal}>
+                    <div className="post__info-content">
+                        <p className="post__info-content-paragraph">{postsData.message}</p>
+                        <p className="post__info-content-amount" onClick={openModal}>
                             {commentsAmount.length} Comments
                         </p>
                     </div>
-                    <div className="comment__info-date">
-                        <p className="comment__info-date-time">
-                            {new Date(commentsData.created_at).toLocaleTimeString("en-US", {
+                    <div className="post__info-date">
+                        <p className="post__info-date-time">
+                            {new Date(postsData.created_at).toLocaleTimeString("en-US", {
                                 hour: "2-digit",
                                 minute: "2-digit",
                             })}
                         </p>
-                        <p className="comment__info-date-date">
-                            {new Date(commentsData.created_at).toLocaleDateString()}
+                        <p className="post__info-date-date">
+                            {new Date(postsData.created_at).toLocaleDateString()}
                         </p>
                     </div>
-                    <div className="comment__info-share">
-                        <div className="comment__info-share-buttons">
+                    <div className="post__info-share">
+                        <div className="post__info-share-buttons">
                             <ButtonElement img={watchImg} name="Watch" />
                             <ButtonElement img={commentsImg} name="Comment" onClick={openModal} />
                         </div>
-                        <p className="comment__info-share-amount" onClick={openModal}>
+                        <p className="post__info-share-amount" onClick={openModal}>
                             {commentsAmount.length} Comments
                         </p>
                     </div>
@@ -98,10 +101,10 @@ export default function CommentElement({ commentsData }) {
             <ReactModal
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
-                className="comment__card-modal"
-                overlayClassName="comment__card-modal-background"
+                className="post__card-modal"
+                overlayClassName="post__card-modal-background"
             >
-                <ShowCommentsModal closeModal={closeModal} postsData={commentsData} />
+                <ShowCommentsModal closeModal={closeModal} postsData={postsData} />
             </ReactModal>
         </>
     );

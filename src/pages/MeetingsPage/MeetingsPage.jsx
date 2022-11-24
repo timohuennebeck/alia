@@ -8,6 +8,7 @@ import hideImg from "../../assets/icons/eye-slash.svg";
 
 // components
 import DetailsRow from "../../components/DetailsRow/DetailsRow";
+import DropdownDark from "../../components/DropdownDark/DropdownDark"
 
 // api calls
 import { getMeetings } from "../../utils/api";
@@ -28,7 +29,7 @@ export default function MeetingsPage({ closeModal }) {
                 <div className="meetings__buttons-hide">
                     <ButtonElementDark name="Hide" img={hideImg} onClick={closeModal} />
                 </div>
-                <ButtonElementDark img={userImg} name="Person" />
+                <DropdownDark />
                 <ButtonElementDark img={calendarImg} name="Date" />
             </div>
             <div className="meetings__information">

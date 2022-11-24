@@ -1,4 +1,4 @@
-import CommentElement from "../../components/CommentElement/CommentElement";
+import PostElement from "../../components/PostElement/PostElement";
 import "./FriendsProfilePage.scss";
 
 import profileImg from "../../assets/images/melanie-perkins.jpg";
@@ -90,7 +90,7 @@ export default function FriendsProfilePage() {
 
                     <div className="friends-profile__align-right-comments">
                         {postsData.map((item) => {
-                            return <CommentElement postsData={item} key={item.id}/>;
+                            return <PostElement postsData={item} key={item.id}/>;
                         })}
                     </div>
                 </div>

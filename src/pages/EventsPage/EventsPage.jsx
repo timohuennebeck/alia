@@ -12,6 +12,7 @@ import DetailsRow from "../../components/DetailsRow/DetailsRow";
 // api calls
 import { getEvents } from "../../utils/api";
 import { useEffect, useState } from "react";
+import DropdownDark from "../../components/DropdownDark/DropdownDark";
 
 export default function EventsPage({ closeModal }) {
     const [eventsData, setEventsData] = useState([]);
@@ -28,7 +29,7 @@ export default function EventsPage({ closeModal }) {
                 <div className="events__buttons-hide">
                     <ButtonElementDark name="Hide" img={hideImg} onClick={closeModal} />
                 </div>
-                <ButtonElementDark img={userImg} name="Person" />
+                <DropdownDark />
                 <ButtonElementDark img={calendarImg} name="Date" />
             </div>
             <div className="events__information">

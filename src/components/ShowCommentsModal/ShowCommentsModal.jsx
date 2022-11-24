@@ -1,15 +1,18 @@
 import "./ShowCommentsModal.scss";
 
 // components
-import CommentElement from "../CommentElement/CommentElement";
+import PostElement from "../PostElement/PostElement";
 import AddNewComment from "../AddNewComment/AddNewComment";
 import { useEffect, useState } from "react";
 import { getComments } from "../../utils/api";
 import ButtonElementDark from "../ButtonElementDark/ButtonElementDark";
 import hideImg from "../../assets/icons/eye-slash.svg";
+import CommentElement from "../CommentElement/CommentElement";
 
 export default function ShowCommentsModal({ postsData, closeModal }) {
     const [commentsData, setCommentsData] = useState([]);
+
+    // console.log(postsData);
 
     useEffect(() => {
         getComments().then(({ data }) => {
@@ -24,12 +27,12 @@ export default function ShowCommentsModal({ postsData, closeModal }) {
             </div>
             <div className="show-comments__main">
                 <div className="show-comments__main-indv">
-                    <CommentElement postsData={postsData} />
+                    <PostElement postsData={postsData} />
                     <AddNewComment />
                 </div>
                 <div className="show-comments__main-indv">
                     {commentsData.map((item) => {
-                        return <CommentElement postsData={item} />;
+                        return <CommentElement commentsData={item} key={item.id} />;
                     })}
                 </div>
             </div>

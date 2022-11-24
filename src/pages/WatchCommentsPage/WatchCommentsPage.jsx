@@ -1,14 +1,19 @@
 import "./WatchCommentsPage.scss";
 
-import CommentElement from "../../components/CommentElement/CommentElement";
+import PostElement from "../../components/PostElement/PostElement";
 import ButtonElementDark from "../../components/ButtonElementDark/ButtonElementDark";
 import userImg from "../../assets/icons/user.svg";
 import calendarImg from "../../assets/icons/calendar-month.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getPosts } from "../../utils/api";
+import DropdownDark from "../../components/DropdownDark/DropdownDark";
 
 export default function WatchCommentsPage() {
     const [postsData, setPostsData] = useState([]);
+    const [filteredPostsData, setFilteredPostsData] = useState([]);
+    const [pullValue, setPullValue] = useState([]);
+
+    const userValues = useRef();
 
     useEffect(() => {
         getPosts().then(({ data }) => {
@@ -16,17 +21,30 @@ export default function WatchCommentsPage() {
         });
     }, []);
 
+    useEffect(() => {
+        setFilteredPostsData(
+            postsData.filter(
+                (favorite) =>
+                    favorite.status === "Favorite" && favorite.users_id === Number(pullValue)
+            )
+        );
+    }, [pullValue]);
+
+    const handleChange = (e) => {
+        setPullValue(e.target.value);
+    };
+
     return (
-        <div className="comments">
+        <form className="comments" ref={userValues}>
             <div className="comments__nav">
-                <ButtonElementDark img={userImg} name="Person" />
+                <DropdownDark onChange={handleChange} />
                 <ButtonElementDark img={calendarImg} name="Date" />
             </div>
             <div className="comments__saved">
-                {postsData.map((item) => {
-                    return <CommentElement postsData={item} key={item.id} />;
+                {filteredPostsData.map((item) => {
+                    return <PostElement postsData={item} key={item.id} />;
                 })}
             </div>
-        </div>
+        </form>
     );
 }

@@ -12,7 +12,7 @@ import docxImg from "../../assets/icons/attach-document.svg";
 import moreImg from "../../assets/icons/more-h.svg";
 
 // images
-import profileImg from "../../assets/images/melanie-perkins.jpg";
+import profileImg from "../../assets/images/portrait.jpg";
 import HeaderLinks from "../HeaderLinks/HeaderLinks";
 
 import { getUsers } from "../../utils/api";
@@ -53,7 +53,7 @@ export default function MobileHeader() {
             </div>
             <Link to={`/profile/${usersData.id}`} className="header__profile">
                 <img className="header__profile-img" src={profileImg} alt="" />
-                <h5 className="header__profile-name">Melanie Perkins</h5>
+                <h5 className="header__profile-name">Timo Huennebeck</h5>
             </Link>
             <ReactModal
                 isOpen={modalIsOpen}

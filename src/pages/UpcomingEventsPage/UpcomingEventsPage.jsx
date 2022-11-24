@@ -42,7 +42,7 @@ export default function UpcomingEventsPage() {
                 <p className="upcoming-events__date">TODAY</p>
                 <div className="upcoming-events__list">
                     {eventsData.map((item) => {
-                        return <EventsElement data={item} />;
+                        return <EventsElement data={item} key={item.id}/>;
                     })}
                 </div>
                 <p className="upcoming-events__more" onClick={openModal}>

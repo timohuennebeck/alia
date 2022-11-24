@@ -1,4 +1,4 @@
-import CommentElement from "../../components/CommentElement/CommentElement";
+import PostElement from "../../components/PostElement/PostElement";
 import "./ProfilePage.scss";
 
 import profileImg from "../../assets/images/melanie-perkins.jpg";
@@ -54,7 +54,7 @@ export default function ProfilePage() {
                 </div>
                 <div className="personal-profile__ctn-comments">
                     {postsData.map((item) => {
-                        return <CommentElement postsData={item} key={item.id} />;
+                        return <PostElement postsData={item} key={item.id} />;
                     })}
                 </div>
             </div>

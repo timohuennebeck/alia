@@ -1,7 +1,7 @@
 import "./AddNewComment.scss";
 
 import InputField from "../InputField/InputField";
-import profileImg from "../../assets/images/melanie-perkins.jpg";
+import profileImg from "../../assets/images/portrait.jpg";
 import postImg from "../../assets/icons/chat.svg";
 
 export default function AddNewComment() {

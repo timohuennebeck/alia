@@ -6,7 +6,7 @@ import bellImg from "../../assets/icons/bell-slash.svg";
 import moreImg from "../../assets/icons/more-h.svg";
 
 // components
-import CommentElement from "../../components/CommentElement/CommentElement";
+import PostElement from "../../components/PostElement/PostElement";
 
 export default function TrendingPage() {
     return (
@@ -35,12 +35,12 @@ export default function TrendingPage() {
                     </div>
                 </div>
             </div>
-            <CommentElement />
-            <CommentElement />
-            <CommentElement />
-            <CommentElement />
-            <CommentElement />
-            <CommentElement />
+            <PostElement />
+            <PostElement />
+            <PostElement />
+            <PostElement />
+            <PostElement />
+            <PostElement />
         </div>
     );
 }

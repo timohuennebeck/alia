@@ -11,11 +11,11 @@ import moreImg from "../../assets/icons/more-h.svg";
 import postImg from "../../assets/icons/chat.svg";
 
 // images
-import profileImg from "../../assets/images/melanie-perkins.jpg";
+import profileImg from "../../assets/images/portrait.jpg";
 
 // components
 import InputField from "../../components/InputField/InputField";
-import NewComment from "../../components/CommentElement/CommentElement";
+import PostElement from "../../components/PostElement/PostElement";
 import AddNewComment from "../../components/AddNewComment/AddNewComment";
 
 // libraries
@@ -107,7 +107,7 @@ export default function HomePage() {
                 </div>
             </div>
             {postsData?.map((item) => {
-                return <NewComment postsData={item} key={item.id} />;
+                return <PostElement postsData={item} key={item.id} />;
             })}
         </div>
     );

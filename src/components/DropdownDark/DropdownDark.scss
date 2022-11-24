@@ -1,0 +1,31 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.dropdown-dark {
+    @include mobile-padding-background;
+    @include flex;
+    gap: $mobile-gap-default;
+    max-height: 2.75rem;
+    width: 100%;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+    }
+
+    &__img {
+        @include svg-white;
+        @include svg-size;
+    }
+
+    &__select {
+        background-color: $prim-color-2;
+        border: none;
+        outline: none;
+        width: 25%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
