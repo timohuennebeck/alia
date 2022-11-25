@@ -1,8 +1,8 @@
 # `Alia`
 
-Moving from a traditional to a remote working environment can be frustrating, but it doesn't have to be! 
+Moving from a traditional to a `remote working environment` can be frustrating, but it doesn't have to be! 
 
-Alia's internal social media platform offers employees an opportunity to find a balance in their life through a sense of community and collaboration both on and off the clock. 
+Alia's internal social media platform offers employees an opportunity to `find a balance in their life` through a sense of community and collaboration both on and off the clock. 
 
 Find out how we are making remote work feel like being in the same room! 👊
 
@@ -13,9 +13,9 @@ Find out how we are making remote work feel like being in the same room! 👊
 
 
 ## `What Issue Is Alia Solving?`
-Alia was created to solve one of the biggest problems one might face as a remote worker - feeling left out. This application aims to solve this long-existing issue through combining team management tools with social media - leaving out the like button which avoids people to keep checking their posts.
+Alia was created to solve one of the `biggest problems` one might face as a remote worker - feeling left out. This application aims to solve this long-existing issue through `combining team management tools with social media` - leaving out the like button which avoids people to keep checking their posts.
 
-Don't make people feel isolated. Make them feel appreciated! 🌻
+Don't make people feel isolated. Make them feel `appreciated`! 🌻
 
 <br />
 
@@ -48,9 +48,9 @@ Have fun! 🌻
 
 ## `Live Demo`
 
-This application has been made accessible to users with the help of Heroku! 👨🏻‍💻
+This application has been made `accessible` to users with the help of Heroku! 👨🏻‍💻
 
-You can find the link to the live demo of Alia in the description of this repo. or [click here](http://alia-internal-social-media.herokuapp.com) to access it.
+You can find the link to the `live demo` of Alia in the description of this repo. or [click here](http://alia-internal-social-media.herokuapp.com) to access it.
 
 ![alia-demo](https://user-images.githubusercontent.com/107037151/203959132-9f6a39b5-002a-4c79-9516-898c4e8ae2dc.gif)
 
