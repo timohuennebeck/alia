@@ -1,10 +1,9 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-
 .landing {
     @include flex-column;
-    padding: $padding-default;
+    padding: $mobile-padding-default;
     height: 80vh;
     justify-content: space-evenly;
 
@@ -39,11 +38,11 @@
 
             &-indv {
                 border: none;
-                padding: 0.35rem 1rem;;
-                border-radius: 0.75rem;;
+                padding: 0.35rem 1rem;
+                border-radius: 0.75rem;
                 color: #000;
                 font-size: 0.75rem;
-                background-color: #FFF;
+                background-color: #fff;
                 min-height: 2.5rem;
                 width: 100%;
 
