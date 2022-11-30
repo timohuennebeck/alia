@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# `Alia`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Moving from a traditional to a `remote working environment` can be frustrating, but it doesn't have to be! 
 
-## Available Scripts
+Alia's internal social media platform offers employees an opportunity to `find a balance in their life` through a sense of community and collaboration both on and off the clock. 
 
-In the project directory, you can run:
+Find out how we are making remote work feel like being in the same room! 👊
 
-### `npm start`
+![alia-logo](https://user-images.githubusercontent.com/107037151/203974633-bf0ea30f-f5de-424c-8e98-3c11fd1bf52c.jpg)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br />
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## `What Issue Is Alia Solving?`
+Alia was created to solve one of the `biggest problems` one might face as a remote worker - feeling left out. This application aims to solve this long-existing issue through `combining team management tools with social media` - leaving out the like button which avoids people to keep checking their posts.
 
-### `npm run build`
+Don't make people feel isolated. Make them feel `appreciated`! 🌻
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## `Installing Alia`
 
-### `npm run eject`
+### `Step 1`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Download ['alia'](https://github.com/timohuennebeck/alia) and ['alia-api'](https://github.com/timohuennebeck/alia-api) and make sure to create a .env file on the client side which includes a port where the server can run. Alia was running on port 8080 in development. Therefore, we recommend using the same.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `Step 2`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Run `npm install` on the client and server side to download all dependencies.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+### `Step 3`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run `npm run migrate` and `npm run seed` on the server side to populate the database.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+### `Step 4`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+You're almost done! On the client side run `npm start` to launch the application and `npx nodemon` on the server side to start the server. Welcome to Alia!
 
-### Analyzing the Bundle Size
+Have fun! 🌻
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## `Live Demo`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This application has been made `accessible` to users with the help of Heroku! 👨🏻‍💻
 
-### Deployment
+You can find the link to the `live demo` of Alia in the description of this repo. or [click here](http://alia-internal-social-media.herokuapp.com) to access it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+![alia-demo](https://user-images.githubusercontent.com/107037151/203959132-9f6a39b5-002a-4c79-9516-898c4e8ae2dc.gif)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

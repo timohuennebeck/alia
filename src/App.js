@@ -22,13 +22,13 @@ import FilesPage from "./pages/FilesPage/FilesPage";
 import HubsPage from "./pages/HubsPage/HubsPage";
 import HuddlePage from "./pages/HuddlePage/HuddlePage";
 import IndvHubPage from "./pages/IndvHubPage/IndvHubPage";
-import LoginButton from "./components/LoginButton/LoginButton";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
     const { isAuthenticated } = useAuth0();
 
     if (!isAuthenticated) {
-        return <LoginButton />;
+        return <LandingPage />;
     }
 
     return (
