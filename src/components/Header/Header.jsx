@@ -24,7 +24,6 @@ export default function MobileHeader() {
 
     const { user, logout } = useAuth0();
 
-
     function openModal() {
         setModalIsOpen(true);
     }
@@ -38,6 +37,10 @@ export default function MobileHeader() {
             setUsersData(data[0]);
         });
     }, []);
+
+    if (!user) {
+        return null;
+    }
 
     return (
         <div className="header">

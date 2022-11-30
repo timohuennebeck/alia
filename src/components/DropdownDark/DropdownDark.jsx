@@ -17,9 +17,9 @@ export default function DropdownDark({ onChange }) {
         <div className="dropdown-dark">
             <img className="dropdown-dark__img" src={personImg} alt="" />
             <select className="dropdown-dark__select" name="status" onChange={onChange}>
-                {/* <option className="dropdown-dark__select-option" value="" disabled selected>
+                <option className="dropdown-dark__select-option" value="" disabled selected>
                     Person
-                </option> */}
+                </option>
                 {usersData.map((item) => {
                     return (
                         <option

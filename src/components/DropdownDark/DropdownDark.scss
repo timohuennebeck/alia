@@ -23,6 +23,9 @@
         border: none;
         outline: none;
         width: 25%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        appearance: none;
 
         &:hover {
             cursor: pointer;
