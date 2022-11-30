@@ -4,12 +4,13 @@ import "./Header.scss";
 import ReactModal from "react-modal";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // icons
 import menuImg from "../../assets/icons/hamburger-menu.svg";
 import watchImg from "../../assets/icons/eye.svg";
 import docxImg from "../../assets/icons/attach-document.svg";
-import moreImg from "../../assets/icons/more-h.svg";
+import logoutImg from "../../assets/icons/lock-alt.svg";
 
 // images
 import profileImg from "../../assets/images/portrait.jpg";
@@ -21,6 +22,9 @@ export default function MobileHeader() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [usersData, setUsersData] = useState([]);
 
+    const { user, logout } = useAuth0();
+
+
     function openModal() {
         setModalIsOpen(true);
     }
@@ -30,10 +34,10 @@ export default function MobileHeader() {
     }
 
     useEffect(() => {
-        getUsers().then(({data}) => {
-            setUsersData(data[0])
-        })
-    }, [])
+        getUsers().then(({ data }) => {
+            setUsersData(data[0]);
+        });
+    }, []);
 
     return (
         <div className="header">
@@ -48,12 +52,17 @@ export default function MobileHeader() {
                     <img className="header__nav-docx" src={docxImg} alt="" />
                 </Link>
                 <Link>
-                    <img className="header__nav-more" src={moreImg} alt="" />
+                    <img
+                        onClick={() => logout({ returnTo: window.location.origin })}
+                        className="header__nav-more"
+                        src={logoutImg}
+                        alt=""
+                    />
                 </Link>
             </div>
             <Link to={`/profile/${usersData.id}`} className="header__profile">
-                <img className="header__profile-img" src={profileImg} alt="" />
-                <h5 className="header__profile-name">Timo Huennebeck</h5>
+                <img className="header__profile-img" src={user.picture} alt="" />
+                <h5 className="header__profile-name">{user.name}</h5>
             </Link>
             <ReactModal
                 isOpen={modalIsOpen}
