@@ -19,6 +19,7 @@ import PostElement from "../../components/PostElement/PostElement";
 
 // libraries
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // api calls
 import { useEffect, useState } from "react";
@@ -26,6 +27,8 @@ import { getPosts } from "../../utils/api";
 
 export default function HomePage() {
     const [postsData, setPostsData] = useState();
+
+    const {user} = useAuth0();
 
     useEffect(() => {
         getPosts().then(({ data }) => {
@@ -60,7 +63,7 @@ export default function HomePage() {
                 </div>
             </div>
             <div className="home__share">
-                <img className="home__share-img" src={profileImg} alt="" />
+                <img className="home__share-img" src={user.picture} alt="" />
                 <div className="home__share-ctn">
                     <div className="home__share-ctn-publish">
                         <InputField placeholder="What's happening?" />

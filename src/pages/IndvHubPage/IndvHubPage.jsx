@@ -19,6 +19,7 @@ import PostElement from "../../components/PostElement/PostElement";
 
 // libraries
 import { Link, useParams } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 
 // api calls
 import { useEffect, useState } from "react";
@@ -27,6 +28,8 @@ import { getHubsId, getPosts } from "../../utils/api";
 export default function IndvHubPage() {
     const [postsData, setPostsData] = useState([]);
     const [hubsData, setHubsData] = useState([]);
+
+    const { user } = useAuth0();
 
     const { id } = useParams();
 
@@ -70,7 +73,7 @@ export default function IndvHubPage() {
                 </div>
             </div>
             <div className="indv-hub__share">
-                <img className="indv-hub__share-img" src={profileImg} alt="" />
+                <img className="indv-hub__share-img" src={user.picture} alt="" />
                 <div className="indv-hub__share-ctn">
                     <div className="indv-hub__share-ctn-publish">
                         <InputField placeholder="What's happening?" />
