@@ -3,40 +3,44 @@
 
 .landing {
     @include flex-column;
-    padding: $mobile-padding-default;
-    height: 80vh;
-    justify-content: space-evenly;
+    gap: $mobile-gap-default;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 
-    @include desktop {
-        height: 100vh;
-        padding: 2.25rem;
-    }
-
-    &__header {
+    &__ctn {
         @include flex-column;
         gap: $mobile-gap-default;
         text-align: center;
-        order: 1;
 
         @include desktop {
-            flex-direction: row;
-            justify-content: space-between;
-            order: 0;
+            height: 35%;
+            width: 35%;
         }
 
-        &-buttons {
+        &-access {
             @include flex-column;
             gap: $mobile-gap-default;
+            opacity: 50%;
+        }
 
-            @include tablet {
-                flex-direction: row;
+        &-indv {
+            @include flex-column;
+            gap: $mobile-gap-default;
+            align-items: center;
+            text-align: center;
+
+            &-logo {
+                max-width: 10rem;
             }
+        }
 
-            @include desktop {
-                flex: 0.15 1 0;
-            }
+        &-login {
+            @include flex-vertical;
+            gap: $mobile-gap-default;
+            justify-content: center;
 
-            &-indv {
+            &-buttons {
                 border: none;
                 padding: 0.35rem 1rem;
                 border-radius: 0.75rem;
@@ -44,55 +48,13 @@
                 font-size: 0.75rem;
                 background-color: #fff;
                 min-height: 2.5rem;
-                width: 100%;
+                min-width: 5rem;
+                max-width: 5rem;
 
                 &:hover {
                     transform: scale(1.05);
                     cursor: pointer;
                 }
-            }
-        }
-
-        &-version {
-            display: none;
-
-            @include desktop {
-                display: block;
-            }
-        }
-    }
-
-    &__img {
-        @include flex-column;
-        justify-content: center;
-        align-items: center;
-        gap: $mobile-gap-default;
-        min-height: 35vh;
-        overflow-y: hidden;
-
-        @include tablet {
-            min-height: 50vh;
-        }
-
-        @include desktop {
-            min-height: 82.5vh;
-        }
-
-        &-version {
-            @include desktop {
-                display: none;
-            }
-        }
-
-        &-mobile {
-            max-width: 15rem;
-
-            @include tablet {
-                max-width: 22.5rem;
-            }
-
-            @include desktop {
-                max-width: 27.5rem;
             }
         }
     }
